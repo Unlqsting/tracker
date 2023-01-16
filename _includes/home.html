@@ -1,11 +1,66 @@
-<table>
-    <tr>
-        <td><a href="/">Home</a></td>
-        <td><a href="/housing">Housing</a></td>
-        <td><a href="/food">Food</a></td>
-        <td><a href="/sports">Sports</a></td>
-        <td><a href="/activities">Activities</a></td>
-        <td><a href="/family-night">Family-Night</a></td>
-        <td><a href="/gallery">Gallery</a></td>
-    </tr>
-</table>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <div class="nav">
+        <a href="/">Home</a>
+        <a href="/etrack">Exercise Tracker</a>
+        <a href="/goals">Goals</a>
+        <a href="/mealplan">Meal Planning</a>
+        <a href="/customize">User Customization</a>
+        <button class="login">Log In</button>
+
+    </div>
+</body>
+
+<style>
+    * {
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  padding: 16px 32px;
+  border-bottom: 5px rgb(73, 72, 72);
+  width: 100vh;
+  background-color: rgb(22, 22, 41);
+  
+}
+
+.nav a {
+    color: aliceblue;
+    margin: 0 48px;
+    padding: 8px 16px;
+    border-radius: 30px;
+}
+
+.nav a:hover {
+    background-color: black;
+    font-weight: 600;
+
+}
+
+.login {
+    background-color: black;
+    width: 85px;
+    height: 50px;
+    color: aliceblue;
+    font-weight: 600;
+    margin-left: 100px;
+
+}
+
+</style>
+</html>
+

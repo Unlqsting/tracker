@@ -1,0 +1,16 @@
+
+
+$blue: rgb(22, 22, 41);
+$gray: rgb(58, 58, 58);
+
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home {
+    background-color: $gray;
+}
+
+
