@@ -1,0 +1,39 @@
+$blue: rgb(22, 22, 41);
+
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.userdata {
+    background-color: $blue;
+    color: whitesmoke;
+    width: 100vh;
+    height: 100vh;
+
+    
+    @include flex();
+
+    input {
+        border-style: outset;
+        background-color: $blue;
+        color: whitesmoke;
+        padding: 5px;
+    }
+
+    label {
+        font-family: 'Arial Narrow Bold', sans-serif;
+        padding: 5px;
+    }
+}
+
+#save {
+    background-color: $blue;
+    color: whitesmoke;
+    width: 15vh;
+    height: 4vh;
+    display: flex;
+    justify-self: flex-end;
+}
+
