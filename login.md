@@ -10,11 +10,12 @@
     <div class="logwrap">
         <div class="logbox">
             <h1>Log in</h1>
-            <input type="email"  class="emailInp" placeholder="Enter your email">
-            <br><br>
-            <input type="password"  class="passInp" placeholder="Enter your password">
-            <button onclick="login()">Log In</button>
-        
+            <form method="GET" action="http://172.27.222.119:8086/api/signups/create">
+                <input type="email"  class="emailInp" placeholder="Enter your email">
+                <br><br>
+                <input type="password"  class="passInp" placeholder="Enter your password">
+                <button type="submit">Log In</button>
+            </form>
         </div>
     </div>    
 </body>
