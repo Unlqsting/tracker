@@ -1,43 +1,51 @@
-<table id="gymTable">
+# Liav
+<table id="statTable">
     <tr>
-        <td>Athlete</td>
-        <td>Target Muscle Group</td>
-        <td>Exercises</td>
-        <td>Gym Location</td>
-        <td>Time in Gym (Hours)</td>
+        <td>Date</td>
+        <td>Weight</td>
+        <td>Height</td>
+        <td>Bench</td>
+        <td>Squat</td>
+    </tr>
+     <tr>
+        <td>01/12/23</td>
+        <td>130</td>
+        <td></td>
+        <td>120</td>
+        <td></td>
+    </tr>
+     <tr>
+        <td>01/11/23</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>225</td>
     </tr>
     <tr>
-        <td>Liav</td>
-        <td>Legs</td>
-        <td>3x12 Leg Press, 3x12 Squat, 3x14 Calf Raise, Hip Thrusters</td>
-        <td>LA Fitness</td>
-        <td>10 Hours</td>
-    </tr>
-    <tr>
-        <td>Noor</td>
-        <td>Chest</td>
-        <td>3x12 Bench Press, 3x12 Chest Press, 3x30 Band Pushup, 3x12 Dumbell Incline Bench Press</td>
-        <td>24 Hour Fitness</td>
-        <td>12 hours</td>
+        <td>01/05/23</td>
+        <td>125</td>
+        <td>5'6</td>
+        <td>115</td>
+        <td>215</td>
     </tr>
 </table>
 
 
-# Add an entry
+# Add New Max
 <table>
     <tr>
-        <th><label for="athlete">Athlete</label></th>
-        <th><label for="muscle">Muscle Group</label></th>
-        <th><label for="exercise">Exercise</label></th>
-        <th><label for="location">Gym Location</label></th>
-        <th><label for="hours">Hours in the Gym</label></th>
+        <th><label for="date">Date</label></th>
+        <th><label for="weight">New Weight</label></th>
+        <th><label for="height">New Height</label></th>
+        <th><label for="bench">New Bench Max</label></th>
+        <th><label for="hours">New Squat Max</label></th>
     </tr>
     <tr>
-        <td><input type="text" name="athlete" id="athlete" required></td>
-        <td><input type="text" name="muscle" id="muscle" required></td>
-        <td><input type="text" name="exercise" id="exercise" required></td>
-        <td><input type="text" name="location" id="location" required></td>
-        <td><input type="text" name="hours" id="hours" required></td>
+        <td><input type="text" name="date" id="date" required></td>
+        <td><input type="text" name="weight" id="weight" required></td>
+        <td><input type="text" name="height" id="height" required></td>
+        <td><input type="text" name="bench" id="bench" required></td>
+        <td><input type="text" name="squat" id="squat" required></td>
         <td ><button onclick="create_Entry()">Add</button></td>
     </tr>
 </table>
@@ -55,22 +63,22 @@
 
 <script>
 function create_Entry() {
-  var table = document.getElementById("gymTable");
+  var table = document.getElementById("statTable");
   var row = table.insertRow(1);
   var cell1 = row.insertCell(0);
   var cell2 = row.insertCell(1);
   var cell3 = row.insertCell(2);
   var cell4 = row.insertCell(3);
   var cell5 = row.insertCell(4);
-  cell1.innerHTML = document.getElementById("athlete").value;
-  cell2.innerHTML = document.getElementById("muscle").value;
-  cell3.innerHTML = document.getElementById("exercise").value;
-  cell4.innerHTML = document.getElementById("location").value;
-  cell5.innerHTML = document.getElementById("hours").value;
+  cell1.innerHTML = document.getElementById("date").value;
+  cell2.innerHTML = document.getElementById("weight").value;
+  cell3.innerHTML = document.getElementById("height").value;
+  cell4.innerHTML = document.getElementById("bench").value;
+  cell5.innerHTML = document.getElementById("squat").value;
 }
 
 function delete_Entry() {
-    var table = document.getElementById("gymTable");
+    var table = document.getElementById("statTable");
     document.getElementsByTagName("tr")[document.getElementById("num").value].remove();
 }
 
