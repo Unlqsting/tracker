@@ -8,17 +8,17 @@
 <body>
     <div class="logwrap">
         <div class="logbox">
-            <h1>Log in</h1>
+            <h1>Sign Up</h1>
             <form method="GET" action="http://172.27.222.119:8086/api/signups/create">
                 <input type="email"  class="emailInp" placeholder="Enter your email">
                 <br><br>
                 <input type="password"  class="passInp" placeholder="Enter your password">
                 <br>
                 <br>
-                <button type="submit">Log In</button>
+                <input type="password"  class="passInp" placeholder="Re-enter your password">
                 <br>
                 <br>
-                <a href="/signup">Don't have an account with us? Sign up here!</a>
+                <button type="submit">Sign up</button>
             </form>
         </div>
     </div>    
@@ -44,11 +44,13 @@
         justify-content: center;
         align-items: center;
         box-shadow: 0px 0px 5px 10px #313147;
+        padding: 5px;
     }
 
     input {
         width: 30vh;
         height: 5vh;
+        margin-left: 20px;
     }
 
     h1 {
