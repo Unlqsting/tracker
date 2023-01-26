@@ -1,4 +1,10 @@
 # Liav
+<style>
+    .stats {
+        width: 400px;
+    }
+</style>
+
 <table id="statTable">
     <tr>
         <td>Date</td>
@@ -32,19 +38,23 @@
 
 
 # Add New Max
-<table>
+<table class="stats">
     <tr>
         <th><label for="date">Date</label></th>
         <th><label for="weight">New Weight</label></th>
         <th><label for="height">New Height</label></th>
         <th><label for="bench">New Bench Max</label></th>
-        <th><label for="hours">New Squat Max</label></th>
     </tr>
     <tr>
         <td><input type="text" name="date" id="date" required></td>
         <td><input type="text" name="weight" id="weight" required></td>
         <td><input type="text" name="height" id="height" required></td>
         <td><input type="text" name="bench" id="bench" required></td>
+    </tr>
+     <tr>
+        <th><label for="hours">New Squat Max</label></th>
+    </tr>
+    <tr>
         <td><input type="text" name="squat" id="squat" required></td>
         <td ><button onclick="create_Entry()">Add</button></td>
     </tr>
