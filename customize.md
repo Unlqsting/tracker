@@ -26,9 +26,14 @@
             <input type="date" id="age" placeholder="Enter your age"><br><br>
             <!--  -->
             <input type="submit" value="Save">
-          </form>              
+          </form>             
         </div>
     </div>
+    <button type="button" class="login-with-google-btn" >
+      Sign in with Google
+    </button> 
 </body>
 
-<script src="customize.js"></script>
+<script src="customize.js">
+  
+</script>

@@ -4,6 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
 </head>
 <body>
     <div class="logwrap">
@@ -20,11 +21,26 @@
                 <br>
                 <a href="/signup">Don't have an account with us? Sign up here!</a>
             </form>
+            <div id="g_id_onload"
+                data-client_id="320731126416-u568ao23cjl9o6tmn26nv1a47v5aige2.apps.googleusercontent.com"
+                data-context="signin"
+                data-ux_mode="popup"
+                data-login_uri="http://localhost:4001/login"
+                data-auto_prompt="false">
+            </div>
+            <div class="g_id_signin"
+                data-type="standard"
+                data-shape="rectangular"
+                data-theme="filled_blue"
+                data-text="continue_with"
+                data-size="large"
+                data-logo_alignment="left">
+            </div>
         </div>
     </div>    
 </body>
 
-<style src="login.css">
+<style>
     .logwrap {
         background-color: rgb(22, 22, 41);
         display: flex;
@@ -44,6 +60,8 @@
         justify-content: center;
         align-items: center;
         box-shadow: 0px 0px 5px 10px #313147;
+        padding: 5px;
+        
     }
 
     input {
