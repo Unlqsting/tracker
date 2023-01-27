@@ -1,4 +1,6 @@
-# Liav
+# Athlete Stats
+
+### Liav
 <style>
     .stats {
         width: 400px;
@@ -37,7 +39,7 @@
 </table>
 
 
-# Add New Max
+## Add New Max
 <table class="stats">
     <tr>
         <th><label for="date">Date</label></th>
@@ -60,7 +62,7 @@
     </tr>
 </table>
 
-# Remove an entry
+## Remove an entry
 <table>
     <tr>
         <th><label for="num">Entry Number to Remove</label></th>
