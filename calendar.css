@@ -1,0 +1,184 @@
+#eventcontainer {
+  width: 450px;
+  height: 728px;
+  background: #222;
+  float: right;
+  right: 120px;
+  position: relative;
+  bottom: 685px;
+  font-family: 'montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  color: white;
+}
+
+#eventtitle {
+  background-color: white;
+  padding: 5px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+#scheduledevents {
+  padding: 10px;
+  font-size: 25px;
+}
+
+button {
+    width: 75px;
+    cursor: pointer;
+    box-shadow: 0px 0px 2px gray;
+    border: none;
+    outline: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    
+  }
+  
+  #calendarHeader {
+    font-size: 50px;
+    color: white;
+    /* background-color: rgb(76, 159, 140); */
+    text-align: center;
+  }
+
+  #calendartop {
+    padding: 10px;
+    color: white;
+    font-size: 26px;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #backButton {
+    background-color: #167b7e;
+    position: relative;
+    left: 650px;
+  }
+  #nextButton {
+    background-color: #167b7e;
+    position: relative;
+    left: 650px;
+  }
+
+  #container {
+    width: 770px;
+    background-color: rgb(0, 0, 0, 0.85);
+    left: 5px;
+  }
+  #weekdays {
+    width: 100%;
+    display: flex;
+    color: white;
+    justify-content: right;
+    /* background-color: #167b7e; */
+  }
+  #weekdays div {
+    width: 110px;
+    padding: 10px;
+    
+  }
+  #calendar {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .day {
+    width: 100px;
+    padding: 10px;
+    height: 100px;
+    cursor: pointer;
+    box-sizing: border-box;
+    background-color: rgb(51, 51, 51);
+    margin: 5px;
+    box-shadow: 0px 0px 3px #CBD4C2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+  }
+  .day:hover {
+    background-color: #38878a;
+  }
+
+  .day + #currentDay {
+    background-color:#e8f4fa;
+  }
+  
+  .padding {
+  cursor: default !important;
+  background-color: #FFFCFF !important;
+  box-shadow: none !important;
+}
+
+#newEventPopup, #deleteEventPopup {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: #002d44;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 350px;
+  top: 100px;
+  left: calc(50% - 175px);
+  position: absolute;
+  font-family: sans-serif;
+  color: white;
+}
+#eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+
+#cancelButton, #deleteButton {
+  background-color: rgb(221, 0, 0);
+  border-radius: 11px;
+  color: white;
+  border-color: white;
+}
+#saveButton, #closeButton {
+  background-color: #38878a;
+  border-radius: 10px;
+  border: 5px;
+  border-color: white;
+  color: white;
+}
+
+#eventcontainer {
+  width: 450px;
+  height: 728px;
+  background: #222;
+  float: right;
+  right: 120px;
+  position: relative;
+  bottom: 685px;
+  font-family: 'montserrat', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  color: white;
+}
+
+#PopupBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+}
