@@ -130,19 +130,19 @@ function delete_Entry() {
 ## Bench Press
 ### Engages Chest, Triceps, Core
 
-![]({{site.baseurl}}/images/home.png "https://github.com/Unlqsting/tracker") 
+![]({{site.baseurl}}/images/bench.png "https://github.com/Unlqsting/tracker") 
 
 ## Squat
 ### Engages Hamstrings, Quads, Calves, Core
 
-![]({{site.baseurl}}/images/home.png "https://github.com/Unlqsting/tracker") 
+![]({{site.baseurl}}/images/squat.png "https://github.com/Unlqsting/tracker") 
 
 ## Pull-Up
 ### Engages Lats, Traps, Biceps, Core
 
-![]({{site.baseurl}}/images/home.png "https://github.com/Unlqsting/tracker") 
+![]({{site.baseurl}}/images/pullup.png "https://github.com/Unlqsting/tracker") 
 
 ## Mile
 ### Cardio, Heart and Lung Health
 
-![]({{site.baseurl}}/images/home.png "https://github.com/Unlqsting/tracker") 
+![]({{site.baseurl}}/images/mile.png "https://github.com/Unlqsting/tracker") 
