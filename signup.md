@@ -10,13 +10,17 @@
     <div class="logwrap">
         <div class="logbox">
             <h1>Sign Up</h1>
-            <form method="POST" action="http://172.27.222.119:8086/api/signups/create">
-                <input type="email"  class="emailInp" placeholder="Enter your email">
+            <form method="POST" action="http://127.0.0.1:8086/api/users/create">
+                <input type="text" class="uid" name="uid" placeholder="Enter your username">
                 <br><br>
-                <input type="password"  class="passInp" placeholder="Enter your password">
+                <input type="text" class="name" name="name" placeholder="Enter your name">
+                <br><br>
+                <input type="email"  class="email" placeholder="Enter your email">
+                <br><br>
+                <input type="password"  class="password" placeholder="Enter your password">
+                <!-- <br>
                 <br>
-                <br>
-                <input type="password"  class="passInp" placeholder="Re-enter your password">
+                <input type="password"  class="passInp" placeholder="Re-enter your password"> -->
                 <br>
                 <br>
                 <button type="submit">Sign up</button>
@@ -53,7 +57,7 @@
 
     .logbox {
         width: 45vh;
-        height: 55vh;
+        height: 60vh;
         background-color: black;
         display: flex;
         flex-direction: column;

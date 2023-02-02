@@ -10,35 +10,39 @@
     <div class="logwrap">
         <div class="logbox">
             <h1>Log in</h1>
-            <form method="GET" action="http://172.27.222.119:8086/api/signups/create">
-                <input type="email"  class="emailInp" placeholder="Enter your email">
+            <form class="logInform" method="post" action="http://127.0.0.1:8086/api/users/create">
+            <!-- http://127.0.0.1:8086/api/users/create -->
+                <input type="text" class="uid" name="uid" placeholder="Enter your username">
                 <br><br>
-                <input type="password"  class="passInp" placeholder="Enter your password">
+                <!-- <input type="text" class="name" name="name" placeholder="Enter your name"> -->
+                <br><br>
+                <input type="password" name="password" class="passInp" placeholder="Enter your password">
                 <br>
                 <br>
                 <button type="submit">Log In</button>
                 <br>
                 <br>
                 <a href="/signup">Don't have an account with us? Sign up here!</a>
+                <div id="g_id_onload"
+                    data-client_id="320731126416-u568ao23cjl9o6tmn26nv1a47v5aige2.apps.googleusercontent.com"
+                    data-context="signin"
+                    data-ux_mode="popup"
+                    data-login_uri="http://localhost:4001/login"
+                    data-auto_prompt="false">
+                </div>
+                <div class="g_id_signin"
+                    data-type="standard"
+                    data-shape="rectangular"
+                    data-theme="filled_blue"
+                    data-text="continue_with"
+                    data-size="large"
+                    data-logo_alignment="left">
+                </div>
             </form>
-            <div id="g_id_onload"
-                data-client_id="320731126416-u568ao23cjl9o6tmn26nv1a47v5aige2.apps.googleusercontent.com"
-                data-context="signin"
-                data-ux_mode="popup"
-                data-login_uri="http://localhost:4001/login"
-                data-auto_prompt="false">
-            </div>
-            <div class="g_id_signin"
-                data-type="standard"
-                data-shape="rectangular"
-                data-theme="filled_blue"
-                data-text="continue_with"
-                data-size="large"
-                data-logo_alignment="left">
-            </div>
         </div>
     </div>    
 </body>
+<script src=""></script>
 
 <style>
     .logwrap {

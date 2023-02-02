@@ -1,14 +1,27 @@
-import './app.css';
-import { useEffect } from 'react';
+logIn = document.querySelector('.logInform');
+name = document.querySelector('.name');
+uid = document.querySelector('.uid');
+password = document.querySelector('.password');
 
-function App() {
+logIn.addEventListener('submit', (e) => {
+    submitForm(e, logIn);
+});
 
-    useEffect(() => {
-        // google obj is coming from html script tag
-        
-    }, []);
+buildjsonForm(form) {
+    formData = {
+        "name": name.value,
+        "uid": uid.value,
+        "password": password.value
+    };
+    return formData;
+};
 
-    return (
-        pass
-    )
-}
+async function submitForm(e, form) {
+    e.preventDefault();
+    
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const jsonForm = buildjsonForm(form);
+    const header = newHeaders();
+    const res = await fetchService.performPostHttpRequest('http://127.0.0.1:8086/api/users/create', jsonForm, header);
+
+}   
