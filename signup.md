@@ -11,11 +11,11 @@
         <div class="logbox">
             <h1>Sign Up</h1>
             <form method="POST" action="http://127.0.0.1:8086/api/users/create">
-                <input type="text" class="uid" name="uid" placeholder="Enter your username">
+                <input type="email"  class="email" placeholder="Enter your email">
                 <br><br>
                 <input type="text" class="name" name="name" placeholder="Enter your name">
                 <br><br>
-                <input type="email"  class="email" placeholder="Enter your email">
+                <input type="text" class="uid" name="uid" placeholder="Enter your username">
                 <br><br>
                 <input type="password"  class="password" placeholder="Enter your password">
                 <!-- <br>
