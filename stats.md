@@ -1,6 +1,31 @@
 # Athlete Stats
 
 ## Liav
+
+### Records
+
+<table id="recordTable">
+    <tr>
+        <td>Age</td>
+        <td>Weight</td>
+        <td>Heigt</td>
+        <td>Bench</td>
+        <td>Squat</td>
+        <td>Pull-Up</td>
+        <td>Mile</td>
+    </tr>
+     <tr>
+        <td>16</td>
+        <td>135</td> 
+        <td>5'6</td>
+        <td>130</td>
+        <td>225</td>
+        <td>21</td>
+        <td>6:42</td>
+    </tr>
+</table>
+
+### Chart
 <style>
     .stats {
         width: 400px;
@@ -17,6 +42,16 @@
         <td>Squat</td>
         <td>Pull-Up</td>
         <td>Mile</td>
+    </tr>
+    <tr>
+      <td>02/02/23</td>
+        <td></td>
+        <td>135</td>
+        <td></td>
+        <td>130</td>
+        <td></td>
+        <td></td>
+        <td></td>
     </tr>
      <tr>
         <td>01/12/23</td>
