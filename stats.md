@@ -33,7 +33,7 @@
 </style>
 
 <table id="statTable">
-    <tr>
+    <tr id = "row 1">
         <td>Date</td>
         <td>Age</td>
         <td>Weight</td>
@@ -154,8 +154,7 @@ function create_Entry() {
 }
 
 function delete_Entry() {
-    var table = document.getElementById("statTable");
-    document.getElementsByTagName("tr")[document.getElementById("num").value].remove();
+    document.getElementById("statTable").deleteRow((document.getElementById("num").value));
 }
 
 </script>
