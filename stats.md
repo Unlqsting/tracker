@@ -1,6 +1,6 @@
 # Athlete Stats
 
-### Liav
+## Liav
 <style>
     .stats {
         width: 400px;
