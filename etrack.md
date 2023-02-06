@@ -13,10 +13,13 @@
 <link rel="stylesheet" href="track.css">
 <h1> </h1>
 <div class="dropdown">
-  <button onclick="myFunction()" class="dropbtn">Tips?</button>
+  <button onclick="parent.open('www.cnn.com)" class="dropbtn">Tips?</button>
   <h1>‎</h1>
   <div id="myDropdown" class="dropdown-content">
     <a href="#">Link 1</a>
+    <button onclick="parent.open('www.cnn.com)" class="dropbtn">How to plan a workout</button>
+    <input type=button onClick="parent.open('http://0.0.0.0:4001/formingworkout')" 
+  value='How to plan a workout' >
   </div>
 <h1> </h1>
 </div>
@@ -24,3 +27,14 @@
 </div>
     
 </body>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+</head>
+</html>
