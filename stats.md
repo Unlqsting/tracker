@@ -100,6 +100,12 @@
         <td><input type="text" name="weight" id="weight" required></td>
         <td><input type="text" name="height" id="height" required></td>
     </tr>
+    <tr>
+        <td ><button onclick="create_Entry()">Add Entry to Chart</button></td>
+        <td ><button onclick="record_Entry()">Add Record</button></td>
+        <td ><button onclick="create_Entry()">Add Record</button></td>
+        <td ><button onclick="create_Entry()">Add Record</button></td>
+    </tr>
      <tr>
         <th><label for="hours">New Squat Max</label></th>
         <th><label for="bench">New Bench Max</label></th>
@@ -113,10 +119,10 @@
         <td><input type="text" name="mile" id="mile" required></td>
     </tr>
     <tr>
-        <td ><button onclick="create_Entry()">Add</button></td>
-        <td ><button onclick="create_Entry()">Add</button></td>
-        <td ><button onclick="create_Entry()">Add</button></td>
-        <td ><button onclick="create_Entry()">Add</button></td>
+        <td ><button onclick="create_Entry()">Add Record</button></td>
+        <td ><button onclick="create_Entry()">Add Record</button></td>
+        <td ><button onclick="create_Entry()">Add Record</button></td>
+        <td ><button onclick="create_Entry()">Add Record</button></td>
     </tr>
 </table>
 
@@ -151,6 +157,26 @@ function create_Entry() {
   cell6.innerHTML = document.getElementById("squat").value;
   cell7.innerHTML = document.getElementById("pullup").value;
   cell8.innerHTML = document.getElementById("mile").value;
+}
+
+function record_Entry() {
+  var table = document.getElementById("recordTable");
+  var column = table.insertColumn(1);
+  var cell1 = row.insertCell(0);
+  var cell2 = row.insertCell(1);
+  var cell3 = row.insertCell(2);
+  var cell4 = row.insertCell(3);
+  var cell5 = row.insertCell(4);
+  var cell6 = row.insertCell(5);
+  var cell7 = row.insertCell(6);
+  var cell8 = row.insertCell(7);
+  cell1.innerHTML = document.getElementById("age").value;
+  cell2.innerHTML = document.getElementById("weight").value;
+  cell3.innerHTML = document.getElementById("height").value;
+  cell4.innerHTML = document.getElementById("bench").value;
+  cell5.innerHTML = document.getElementById("squat").value;
+  cell6.innerHTML = document.getElementById("pullup").value;
+  cell7.innerHTML = document.getElementById("mile").value;
 }
 
 function delete_Entry() {
