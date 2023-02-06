@@ -18,9 +18,6 @@
                 <input type="text" class="uid" name="uid" placeholder="Enter your username">
                 <br><br>
                 <input type="password"  class="password" placeholder="Enter your password">
-                <!-- <br>
-                <br>
-                <input type="password"  class="passInp" placeholder="Re-enter your password"> -->
                 <br>
                 <br>
                 <button type="submit">Sign up</button>
