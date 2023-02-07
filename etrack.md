@@ -24,7 +24,7 @@
   </div> -->
 
 <header class="header">
-  <button onclick="plan()" class="planWorkout">How to plan a workout</button>
+  <button onclick="plan()" class="planWorkout">Workout Plan</button>
   <h1>‎</h1>
 <header>
 
