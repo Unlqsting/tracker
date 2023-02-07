@@ -1,6 +1,6 @@
 <body>
 <div class="workoutWrap">
-<header class="header">
+  <header class="header">
     <h1 style="color:white;">Track your workout</h1>
     <h1> ‏‏‎ ‎</h1>
     <button class="removeWorkout">Remove Prev</button>
@@ -12,23 +12,22 @@
 
 <link rel="stylesheet" href="track.css">
 <h1> </h1>
-<div class="dropdown">
+<!-- <div class="dropdown">
   <button onclick="parent.open('www.cnn.com)" class="dropbtn">Tips?</button>
   <h1>‎</h1>
   <div id="myDropdown" class="dropdown-content">
     <a href="#">Link 1</a>
     <button onclick="parent.open('www.cnn.com)" class="dropbtn">How to plan a workout</button>
     <input type=button onClick="parent.open('http://0.0.0.0:4001/formingworkout')" 
-  value='How to plan a workout' >
-  </div>
-<h1> </h1>
-</div>
+    value='How to plan a workout' >
+    <button>test<button>
+  </div> -->
 
-</div>
-    
-</body>
+<header class="header">
+  <button onclick="plan()" class="planWorkout">How to plan a workout</button>
+  <h1>‎</h1>
+<header>
 
-<!DOCTYPE html>
 <html>
 <head>
 <style>
