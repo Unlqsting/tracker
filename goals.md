@@ -13,7 +13,24 @@
         <a href="#" class="btn">Goal</a> 
         </div>
     </div>
-
+<table>
+  <tr>
+    <th>Goal</th>
+    <th>Difficulty</th>
+    <th>Date</th>
+  </tr>
+  <tr>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+  <tr>
+    <td>N/A</td>
+    <td>N/A</td>
+    <td>N/A</td>
+  </tr>
+</table>
+ 
 <form action="/action_page.php">
     <label for="goal">Goal:</label><br>
     <input type="text" id="goalname" name="goalname" value="135 Bench"><br>
