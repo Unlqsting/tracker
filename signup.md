@@ -11,6 +11,8 @@
         <div class="logbox">
             <h1>Sign Up</h1>
             <form method="POST" action="http://127.0.0.1:8086/api/users/create">
+                <!-- INPUTS  -->
+                <!--  -->
                 <input type="email"  class="email" placeholder="Enter your email">
                 <br><br>
                 <input type="text" class="name" name="name" placeholder="Enter your name">
