@@ -18,14 +18,22 @@ workoutPreview = '<div class="dropdown">' +
 '<button onclick="chestbuttonSwitch()" id="chest">Chest</button>' +
 '<a class="back">Back</a>' +
 '<a class="legs">Legs</a>' +
+'<a class="legs">Legs</a>' +
 '</div>' +
-'</div>' 
+'</div>' +
+'<button class="removeWorkout">Remove</button>'
 
 function addNew(){
     const newDiv = document.createElement("div");
     newDiv.classList.add("workouts")
     divCont.appendChild(newDiv);
-    newDiv.innerHTML = workoutPreview
+    newDiv.innerHTML = workoutPreview;
+    
+    const removeButton = newDiv.querySelector(".removeWorkout");
+    removeButton.addEventListener("click", function() {
+        newDiv.remove();
+    });
 }
 
 addWorkout.addEventListener("click", addNew);
+
