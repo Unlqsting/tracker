@@ -65,11 +65,19 @@ body {
   padding: 12px 16px;
   text-decoration: none;
   display: block;
-  background-color: #636363;
+  background-color: #04AA6D;
   margin: 0 15px 0;
   border-radius: 25px;
 }
 
+.removeWorkout {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 25px;
+}
 
 /* Change color of dropdown links on hover */
 .dropdown-content a:hover {background-color: rgb(28, 28, 57);;}
