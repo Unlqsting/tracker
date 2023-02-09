@@ -1,38 +1,25 @@
-## Family Night
-> Each evening family will meet.  Family nights are intended to build the Leuck family legacy.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals</title>
+</head>
+<body>
+    <div class="goalWrap">
+        <h1>It's time to enter your goals. Select upto 3 goals, but remember to include one weight goal.</h1>
+        <div class="goals">
+        <a href="#" class="btn">Goal</a> 
+        </div>
+    </div>
 
-### Leuck Greet
-> Movie, Games, Popcorn.  As we slumber in from our travels, how about an unwinding night?
-- Start with Movie
-- Transition to games
-- Mom and Pop welcome, stories about there first family reunions.  Recap of some of the great Leuck get togethers. 
-
-Trivia, which one is Frank and Judith?  who are the others?
-<div class="row"> <!--- make a new row -->
-  <!-- each column is one-third of width -->
-  <div class="column">
-    <img src="/images/sherwood_glena.jpg" alt="Field" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/frank_judith.jpg" alt="Bocce" style="width:100%">
-  </div>
-   <div class="column">
-    <img src="/images/norville_erma.jpg" alt="Pool" style="width:100%">
-  </div>
-</div>
-
-### Tuesday Family Night
-> Family History night.  What better way to unite in reunion spirit then talk about us, explore our similarities and get excited about our differences.  A night of stories on how we all came together as Leuck's, plus some games on our similarities and differences.
-- Learn the "Leuck Song"
-- Kick off with some games to look at our similarities and differences.
-- Originals, plan 5 minute story and introduction on you and your clan.   Props and acting encouraged with your stories.  Stick to the 5 minute time line.
-- Frank and Judith love story
-- Encores and requests
-- Family prayer, 'Leuck style'
-
-### Wednesday Family Night
-> Sports Trivia.  John will give trivia questions to everyone.
-
-### Thursday Family Night
-
-### Friday Family Night
+<form action="/action_page.php">
+    <label for="goal">Goal:</label><br>
+    <input type="text" id="goalname" name="goalname" value="135 Bench"><br>
+    <label for="difficulty">Difficulty:</label><br>
+    <input type="text" id="Diff" name="Diff" value="5"><br><br>
+    <input type="submit" value="Submit">
+</form> 
+</body>
+</html>
