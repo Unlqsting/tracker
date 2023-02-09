@@ -4,8 +4,7 @@
   background: #222;
   float: right;
   right: 120px;
-  position: relative;
-  bottom: 685px;
+  position: right;
   font-family: 'montserrat', sans-serif;
   display: flex;
   flex-direction: column;
@@ -41,14 +40,14 @@ button {
   }
   
   #calendarHeader {
-    font-size: 50px;
+    font-size: 40px;
     color: white;
     /* background-color: rgb(76, 159, 140); */
     text-align: center;
   }
 
   #calendartop {
-    padding: 10px;
+    padding: 5px;
     color: white;
     font-size: 26px;
     font-family: sans-serif;
@@ -68,9 +67,11 @@ button {
   }
 
   #container {
-    width: 770px;
+    width: 420px;
     background-color: rgb(0, 0, 0, 0.85);
     left: 5px;
+    float: left;
+    margin-left: 20px;
   }
   #weekdays {
     width: 100%;
@@ -80,7 +81,7 @@ button {
     /* background-color: #167b7e; */
   }
   #weekdays div {
-    width: 110px;
+    width: 60px;
     padding: 10px;
     
   }
@@ -91,9 +92,9 @@ button {
     flex-wrap: wrap;
   }
   .day {
-    width: 100px;
+    width: 50px;
     padding: 10px;
-    height: 100px;
+    height: 50px;
     cursor: pointer;
     box-sizing: border-box;
     background-color: rgb(51, 51, 51);
@@ -157,7 +158,7 @@ button {
   color: white;
 }
 
-#eventcontainer {
+/* #eventcontainer {
   width: 450px;
   height: 728px;
   background: #222;
@@ -170,7 +171,7 @@ button {
   flex-direction: column;
   align-items: left;
   color: white;
-}
+} */
 
 #PopupBackDrop {
   display: none;
@@ -181,4 +182,8 @@ button {
   height: 100%;
   position: absolute;
   background-color: rgba(0,0,0,0.8);
+}
+
+#hasEvents {
+  color: rgba(74, 219, 151, 0.85)
 }
