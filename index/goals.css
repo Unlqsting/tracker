@@ -5,8 +5,9 @@ body{
     justify-content: center;
     align-items: center;
     display: flex;
-
+    background-color: lightblue;
 }
+
 .btn{
     font-family: "Roboto", sans-serif;
     font-size: 18px;
