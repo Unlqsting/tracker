@@ -1,6 +1,15 @@
-# How to form a good workout
+<html>
+<head>
+<style>
+body {background-color: powderblue;}
+h1   {color: black;}
+p    {color: black;}
+</style>
+</head>
+<body>
 
-A well-formed workout plan is the foundation of a successful fitness routine. It provides structure, guidance, and accountability, which are all critical elements in reaching your fitness goals. Here are some key steps to help you create an effective workout plan:
+<h1 style="text-align: center;">How to form a good workout</h1>
+<p style="text-align: center;">A well-formed workout plan is the foundation of a successful fitness routine. It provides structure, guidance, and accountability, which are all critical elements in reaching your fitness goals. Here are some key steps to help you create an effective workout plan:
 
 Determine your fitness goals: The first step in creating a workout plan is to establish what you want to achieve. Are you looking to build muscle, increase endurance, lose weight, or simply improve your overall health? Knowing your goals will help you select the right types of exercises and determine the intensity, frequency, and duration of your workouts.
 
@@ -16,4 +25,5 @@ Gradually increase the intensity: As you progress, it's important to gradually i
 
 Stay accountable: Finally, it's important to stay accountable to your workout plan. You can do this by tracking your progress, setting achievable goals, and staying motivated. You can also consider working with a personal trainer, who can provide guidance and support, or joining a workout group, which can provide motivation and accountability.
 
-In conclusion, creating a good workout plan requires a combination of self-awareness, goal setting, and a willingness to stick to a routine. Remember, a workout plan is a living document and should be adjusted regularly to reflect changes in your fitness level and goals. Stay committed, stay focused, and enjoy the process of reaching your fitness goals.
+In conclusion, creating a good workout plan requires a combination of self-awareness, goal setting, and a willingness to stick to a routine. Remember, a workout plan is a living document and should be adjusted regularly to reflect changes in your fitness level and goals. Stay committed, stay focused, and enjoy the process of reaching your fitness goals.</p>
+
