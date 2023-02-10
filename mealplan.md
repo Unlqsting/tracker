@@ -4,10 +4,11 @@
 
 <body>
     <div class="mealWrap">
-        <div class="bmi">
-            <h1>Want to know your BMI? Click this button: </h1>
-            <button class="bmiButt" onclick="bmiPop()"></button>
-        </div>
+        <div class="mealBox">
+            <h1>Meal Plan</h1>
+            <form class="mealForm" method="post" action="http://"
+                #
+            </form>
     </div>
 </body>
 

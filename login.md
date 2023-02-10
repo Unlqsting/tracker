@@ -10,13 +10,13 @@
     <div class="logwrap">
         <div class="logbox">
             <h1>Log in</h1>
-            <form class="logInform" method="post" action="http://127.0.0.1:8086/api/users/create">
+            <form class="logInform" method="post" action="http://127.0.0.1:8086/api/users/login">
             <!-- http://127.0.0.1:8086/api/users/create -->
                 <input type="text" class="uid" name="uid" placeholder="Enter your username">
                 <br><br>
                 <!-- <input type="text" class="name" name="name" placeholder="Enter your name"> -->
                 <br><br>
-                <input type="password" name="password" class="passInp" placeholder="Enter your password">
+                <!-- <input type="password" name="password" class="passInp" placeholder="Enter your password"> -->
                 <br>
                 <br>
                 <button type="submit">Log In</button>
