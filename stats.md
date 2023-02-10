@@ -20,8 +20,6 @@
   </tbody>
 </table>
 
-<p>Athlete API</p>
-
 <form action="javascript:create_athlete()">
     <p><label>
        Age:
@@ -57,7 +55,7 @@
   const resultContainer = document.getElementById("result");
   // prepare URL's to allow easy switch from deployment and localhost
   //const url = "http://localhost:8086/api/users"
-  const url = "http://172.17.229.35:8086/api/athlete"
+  const url = "http://172.20.126.38:8086/api/athlete/"
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
 
@@ -266,34 +264,38 @@
 <table class="stats">
     <tr>
         <th><label for="date">Date</label></th>
-        <th><label for="age">Age</label></th>
-        <th><label for="weight">Weight</label></th>
-    </tr>
     <tr>
         <td><input type="text" name="date" id="date" required></td>
-        <td><input type="text" name="age" id="age" required></td>
-        <td><input type="text" name="weight" id="weight" required></td>
-    </tr>
     <tr>
         <td ><button onclick="create_Entry()">Add Entry to Chart</button></td>
-        <td ><button onclick="record_Entry()">Add Record</button></td>
+    </tr>
+    <tr>
+        <th><label for="age">Age</label></th>
+        <th><label for="weight">Weight</label></th>
+        <th><label for="Bench">New Bench Max</label></th>
+    </tr>
+    <tr>
+        <td><input type="text" name="age" id="age" required></td>
+        <td><input type="text" name="weight" id="weight" required></td>
+        <td><input type="text" name="bench" id="bench" required></td>
+    </tr>
+    <tr>
+        <td ><button onclick="create_Entry()">Add Record</button></td>
+        <td ><button onclick="create_Entry()">Add Record</button></td>
         <td ><button onclick="create_Entry()">Add Record</button></td>
     </tr>
-     <tr>
-        <th><label for="hours">New Squat Max</label></th>
-        <th><label for="bench">New Bench Max</label></th>
+    </tr>
+        <th><label for="squat">New Squat Max</label></th>
         <th><label for="pullup">New Pull-Up Max</label></th>
-        <th><label for="pullup">New Mile Time</label></th>
+        <th><label for="mile">New Mile Time</label></th>
     </tr>
     <tr>
         <td><input type="text" name="squat" id="squat" required></td>
-        <td><input type="text" name="bench" id="bench" required></td>
         <td><input type="text" name="pullup" id="pullup" required></td>
         <td><input type="text" name="mile" id="mile" required></td>
     </tr>
     <tr>
-        <td ><button onclick="create_Entry()">Add Record</button></td>
-        <td ><button onclick="create_Entry()">Add Record</button></td>
+        <td ><button onclick="record_Entry()">Add Record</button></td>
         <td ><button onclick="create_Entry()">Add Record</button></td>
         <td ><button onclick="create_Entry()">Add Record</button></td>
     </tr>
