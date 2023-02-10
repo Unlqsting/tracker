@@ -40,3 +40,5 @@
 </form> 
 </body>
 </html>
+
+<link rel="stylesheet" href="goals.css">
