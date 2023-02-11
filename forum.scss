@@ -52,6 +52,13 @@ input {
     overflow: scroll;
 }
 
+input.postText {
+    background-color: white;
+    color: black;
+    height: 15vh;
+    width: 20vw;
+}
+
 button {
     border-color: white;
     border-style: outset;
@@ -61,6 +68,5 @@ button {
     padding: 8px;
     font-size: 16px;
     border: none;
-    position: relative;
-    bottom: 8px;
+    
 }
