@@ -1,9 +1,9 @@
 <body>
 <div class="workoutWrap">
   <header class="header">
-    <h1 style="color:white;">Track your workout</h1>
+    <h1 style="color:white;">Track Your Workout</h1>
     <h1> ‏‏‎ ‎</h1>
-    <button class="removeWorkout">Remove Prev</button>
+    <button onclick="plan()" class="planWorkout">Workout Plan</button>
     <button class="addWorkout">Add Workout</button>
     <h1>‎</h1>
 </header>
@@ -23,10 +23,6 @@
     <button>test<button>
   </div> -->
 
-<header class="header">
-  <button onclick="plan()" class="planWorkout">Workout Plan</button>
-  <h1>‎</h1>
-<header>
 
 <html>
 <head>
