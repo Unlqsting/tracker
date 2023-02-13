@@ -8,12 +8,36 @@
     <link rel="stylesheet" href="goals.css">
 </head>
 <body>
+  <main class = "table"> 
+      <section class="table_header">
+        <h1>Goals</h1>
+        </section>
+      <section class="table_body">
+        <table>
+          <thead>
+            <tr>
+              <th> id </th>
+              <th> Goal </th>
+              <th> Difficulty </th>
+              <th> Date </th>
+              <th> Status </th>
+          </thead>
+            <tbody>
+              <tr>
+                <td> 1 </td>
+                <td> Example </td>
+                <td> Hardest </td>
+                <td> 22 February 2023</td>
+                <td>
+                  <p> In Progress </p>
+                </td>
+              </tr>
+            </tbody>
+      </section>
+      
+  </main>
     <div class="goalWrap">
-        <h1>It's time to enter your goals. Select upto 3 goals, but remember to include one weight goal.</h1>
-        <div class="goals">
-        <a href="#" class="btn">Goal</a> 
-        </div>
-    </div>
+        
 <table>
   <tr>
     <th>Goal</th>
@@ -41,3 +65,4 @@
 </form> 
 </body>
 </html>
+
