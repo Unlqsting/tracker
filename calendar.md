@@ -65,6 +65,7 @@
       <div id="scheduledevents">
 
       </div>
+      <button id="clearButton" onclick="clearWorkouts()">Clear All</button>
     </div>
 
   </body>

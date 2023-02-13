@@ -3,19 +3,24 @@ var savedEvents = {
 }
 
 function updateCal() {
-    console.log("retrieving clicked date");
-    console.log(clicked);
+    console.log(savedEvents);
+    closePopup();
+    document.getElementById("scheduledevents").innerText = '';
     savedEvents[clicked + ' ' + document.getElementById("calendarHeader").innerText + ' workout(s)'].push(document.getElementById('eventTitleInput').value);
     document.getElementById('eventTitleInput').value = ''
-    closePopup();
-    console.log(savedEvents)
-    notemptylists = new Array();
-    for (const [k, v] of Object.entries(savedEvents)) {
-    if (!Array.isArray(v) || v.length) {
-        notemptylists.push(k + ": " + v);
-    }
-    }
-    document.getElementById("scheduledevents").innerText = notemptylists.join("\n");
+    applySavedData();
+    fetch("api/etrack_users/update", {
+        method: "PATCH",
+        body: JSON.stringify({
+            uname: "testUser",
+            savedWorkouts: notemptyvalues,
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+        .then(response => response.json())
+        .then(data => console.log(data)); 
 }
 
 const newEventPopup = document.getElementById('newEventPopup');
@@ -94,7 +99,49 @@ calendar.appendChild(daySquare);
 
 } 
 
-function saveEvent(day, input) {
-
+function clearWorkouts() {
+    savedEvents = {};
+    applySavedData();
+    fetch("api/etrack_users/update", {
+        method: "PATCH",
+        body: JSON.stringify({
+            uname: "testUser",
+            savedWorkouts: {},
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8"
+        }
+    })
+        .then(response => response.json())
+        .then(data => console.log(data)); 
 }
+
+fetch('api/etrack_users/')
+  .then((response) => response.json())
+  .then((data) => this.applydata(data[0]));
+
+function applydata(data) {
+    for (const [k, v] of Object.entries(data["savedWorkouts"])) {
+        savedEvents[k] = v
+    }
+    applySavedData();
+}
+
+function applySavedData() {
+    notemptyvalues= {};
+    for (const [k, v] of Object.entries(savedEvents)) {
+        if (!Array.isArray(v) || v.length) {
+            notemptyvalues[k] = v;
+        }
+    }
+    notemptyvaluesaslist = new Array();
+    for (const [k, v] of Object.entries(notemptyvalues)) {
+        if (!Array.isArray(v) || v.length) {
+            notemptyvaluesaslist.push(k + ': ' + v.join(", "));
+        }
+    }
+ 
+    document.getElementById("scheduledevents").innerText = notemptyvaluesaslist.join("\n");
+}
+
 renderCalendar();
