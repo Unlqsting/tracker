@@ -20,8 +20,4 @@
             <input type="text" name="postText" class="postText" >
             <!--  -->
             <button type="submit" class="topicSubmit">Add Topic</button>
-        </form>
-    </div>
-    <!--  -->
-</body>
-</html>
+        
