@@ -36,3 +36,4 @@ function addNew(){
 }
 
 addWorkout.addEventListener("click", addNew);
+
