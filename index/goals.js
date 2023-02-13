@@ -12,5 +12,3 @@ function addNew(){
     divCont.appendChild(newDiv);
     newDiv.innerHTML = viewGoal
 }
-
-viewGoal = 
