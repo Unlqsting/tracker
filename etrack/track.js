@@ -90,7 +90,7 @@ function addNew(){
     });
     
     const fiveButton = newDiv.querySelector(".five-btn");
-    chestButton.addEventListener("click", function() {
+    fiveButton.addEventListener("click", function() {
         chooseReps.innerText = fiveButton.innerText;
         repOptions.style.display = "none";
     });
@@ -128,3 +128,25 @@ function addNew(){
 }
 
 addWorkout.addEventListener("click", addNew);
+
+// addWorkout.addEventListener("click", addNew);
+//   fetch('http://127.0.0.1:8086/api/users/', {
+//     method: 'POST',
+//     headers: {
+//       'Content-Type': 'application/json'
+//     },
+//     body: JSON.stringify(workoutPreview)
+//   })
+//   .then(response => {
+//     if (response.ok) {
+//       return response.json();
+//     } else {
+//       throw new Error('Network response was not ok.');
+//     }
+//   })
+//   .then(data => {
+//   })
+//   .catch(error => {
+//     console.error('There was a problem with the fetch operation:', error);
+//   });
+// ;
