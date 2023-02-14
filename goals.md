@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Goals</title>
     <link rel="stylesheet" href="goals.css">
+    <link rel="oogabooga">
 </head>
 <body>
   <main class = "table"> 
@@ -32,29 +33,46 @@
                   <p> In Progress </p>
                 </td>
               </tr>
+              <tr>
+                <td> 2 </td>
+                <td> Example </td>
+                <td> Hardest </td>
+                <td> 22 February 2023</td>
+                <td>
+                  <p> In Progress </p>
+                </td>
+              </tr>
             </tbody>
       </section>
-      
-  </main>
-    <div class="goalWrap">
-        
-<table>
-  <tr>
-    <th>Goal</th>
-    <th>Difficulty</th>
-    <th>Date</th>
-  </tr>
-  <tr>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-  </tr>
-  <tr>
-    <td>N/A</td>
-    <td>N/A</td>
-    <td>N/A</td>
-  </tr>
-</table>
+
+  <script>
+    function addRow() {
+  // Get the table element
+  var table = document.querySelector('table');
+
+  // Create a new row
+  var newRow = table.insertRow(-1);
+
+  // Add cells to the new row
+  var idCell = newRow.insertCell(0);
+  var goalCell = newRow.insertCell(1);
+  var diffCell = newRow.insertCell(2);
+  var dateCell = newRow.insertCell(3);
+  var statusCell = newRow.insertCell(4);
+
+  // Set the cell values for the new row
+  idCell.innerHTML = '2';
+  goalCell.innerHTML = 'New Goal';
+  diffCell.innerHTML = 'Easy';
+  dateCell.innerHTML = '23 February 2023';
+  statusCell.innerHTML = '<p>In Progress</p>';
+}
+
+
+    </script>
+
+<button onclick="addRow()">Add Row</button>
+
  
 <form action="/action_page.php">
     <label for="goal">Goal:</label><br>
