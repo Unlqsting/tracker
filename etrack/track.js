@@ -90,7 +90,7 @@ function addNew(){
     });
     
     const fiveButton = newDiv.querySelector(".five-btn");
-    chestButton.addEventListener("click", function() {
+    fiveButton.addEventListener("click", function() {
         chooseReps.innerText = fiveButton.innerText;
         repOptions.style.display = "none";
     });
