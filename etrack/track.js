@@ -127,6 +127,8 @@ function addNew(){
 
 }
 
+addWorkout.addEventListener("click", addNew);
+
 // addWorkout.addEventListener("click", addNew);
 //   fetch('http://127.0.0.1:8086/api/users/', {
 //     method: 'POST',
@@ -147,4 +149,4 @@ function addNew(){
 //   .catch(error => {
 //     console.error('There was a problem with the fetch operation:', error);
 //   });
-;
+// ;
