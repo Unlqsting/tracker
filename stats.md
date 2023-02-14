@@ -111,7 +111,7 @@
     });
   }
 
-  function create_Athlete(){
+  function create_athlete(){
     //Validate Password (must be 6-20 characters in len)
     //verifyPassword("click");
     const body = {
