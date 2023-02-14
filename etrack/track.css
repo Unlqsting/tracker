@@ -12,7 +12,7 @@
   background-color: rgb(17, 58, 78);
   color: white;
   margin: 0 15px 15px 0;
-  border-radius: 5px;
+  border-radius: 15px;
 }/*# sourc sourceMappingURL=track.css.map */
 
 .workoutWrap {
@@ -98,13 +98,13 @@ body {
 }
 
 .exercise-option {
-  background-color: #04AA6D;
+  background-color: #686868;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
-  margin-left: 40px;
+  margin-left: 5px;
 }
 
 .choose-exercise {
@@ -127,12 +127,13 @@ body {
 }
 
 .rep-option {
-  background-color: #04AA6D;
+  background-color: #686868;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
+  margin-left: 5px;
 }
 
 .choose-sets {
@@ -146,10 +147,11 @@ body {
 }
 
 .set-option {
-  background-color: #04AA6D;
+  background-color: #686868;
   color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
   border-radius: 5px;
+  margin-left: 5px;
 }
