@@ -8,8 +8,8 @@
             <h1>Meal Plan</h1>
             <form class="mealForm" method="post" action="http://"
                 #
-            </form>
-    </div>
+
+</div>
 </body>
 
 <script src="mealplan.js"></script>
