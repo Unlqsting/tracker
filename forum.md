@@ -8,6 +8,10 @@
 </head>
 <body>
     <div class="addWrap">
+        <div class="posts" id="postContainer"></div>
+        <!--  -->
+        <br><br>
+        <br>
         <h1>Add a Topic</h1>
         <form method=post action="http://127.0.0.1:8086/api/forum/create">
 <!--  -->
@@ -20,4 +24,14 @@
             <input type="text" name="postText" class="postText" >
             <!--  -->
             <button type="submit" class="topicSubmit">Add Topic</button>
+<!--  -->
+    <div id="postModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modalPostTitle"></h3>
+            <p id="modalPostText"></p>
+        </div>
+    </div>
+
+<script src="forum.js">
         
