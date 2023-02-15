@@ -4,7 +4,7 @@
 
 <p>Athlete API</p>
 
-<table>
+<table id = "result">
   <thead>
   <tr>
     <th>Age</th>
@@ -20,6 +20,8 @@
   </tbody>
 </table>
 
+<p>Create API</p>
+
 <form action="javascript:create_athlete()">
     <p><label>
        Age:
@@ -27,23 +29,23 @@
     </label></p>
     <p><label>
         Weight:
-        <input type="Weight" name="Weight" id="Weight" required>
+        <input type="text"  id="Weight" required>
     </label></p>
     <p><label>
         Bench:
-        <input type="Bench" name="Bench" id="Bench">
+        <input type="text"  id="Bench" required>
     </label></p>
      <p><label>
         Squat:
-        <input type="Squat" name="Squat" id="Squat">
+        <input type="text"  id="Squat" required>
     </label></p>
      <p><label>
         Pull-up:
-        <input type="Pullup" name="Pullup" id="Pullup">
+        <input type="text" id="Pullup" required>
     </label></p>
      <p><label>
         Mile:
-        <input type="Mile" name="Mile" id="Mile">
+        <input type="text"  id="Mile" required>
     </label></p>
     <p>
         <button>Create</button>

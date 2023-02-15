@@ -1,5 +1,10 @@
 
+<head>
+<style>
 
+</style>
+  <link rel="stylesheet" href="track.css">
+</head>
 <body>
 <div class="workoutWrap">
   <header class="header">
@@ -12,7 +17,7 @@
 
 <script src="track.js"></script>
 
-<link rel="stylesheet" href="track.css">
+
 <h1> </h1>
 <!-- <div class="dropdown">
   <button onclick="parent.open('www.cnn.com)" class="dropbtn">Tips?</button>
@@ -27,11 +32,5 @@
 
 
 <html>
-<head>
-<style>
-h1 {text-align: center;}
-p {text-align: center;}
-div {text-align: center;}
-</style>
-</head>
+
 </html>
