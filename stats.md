@@ -4,7 +4,7 @@
 
 <p>Athlete API</p>
 
-<table>
+<table id = "result">
   <thead>
   <tr>
     <th>Age</th>
@@ -20,6 +20,8 @@
   </tbody>
 </table>
 
+<p>Create API</p>
+
 <form action="javascript:create_athlete()">
     <p><label>
        Age:
@@ -27,23 +29,23 @@
     </label></p>
     <p><label>
         Weight:
-        <input type="Weight" name="Weight" id="Weight" required>
+        <input type="text"  id="Weight" required>
     </label></p>
     <p><label>
         Bench:
-        <input type="Bench" name="Bench" id="Bench">
+        <input type="text"  id="Bench" required>
     </label></p>
      <p><label>
         Squat:
-        <input type="Squat" name="Squat" id="Squat">
+        <input type="text"  id="Squat" required>
     </label></p>
      <p><label>
         Pull-up:
-        <input type="Pullup" name="Pullup" id="Pullup">
+        <input type="text" id="Pullup" required>
     </label></p>
      <p><label>
         Mile:
-        <input type="Mile" name="Mile" id="Mile">
+        <input type="text"  id="Mile" required>
     </label></p>
     <p>
         <button>Create</button>
@@ -54,8 +56,8 @@
   // prepare HTML result container for new output
   const resultContainer = document.getElementById("result");
   // prepare URL's to allow easy switch from deployment and localhost
-  //const url = "http://localhost:8086/api/users"
-  const url = "http://172.19.104.182:8086/api/athlete/"
+  const url = "http://localhost:8086/api/athlete"
+  //const url = "http://172.19.104.182:8086/api/athlete"
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
 
@@ -111,7 +113,7 @@
     });
   }
 
-  function create_user(){
+  function create_athlete(){
     //Validate Password (must be 6-20 characters in len)
     //verifyPassword("click");
     const body = {
@@ -438,8 +440,6 @@ function delete_Entry() {
 
     html { background: #6C7989; background: #6C7989 linear-gradient(#6C7989, #434B55) fixed; height: 100%; }
 
-    body { padding: 50px 0; margin: 0; font: 14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif; color: #555; font-weight: 300; background: url("../images/checker.png") fixed; min-height: calc(100% - 100px); }
-
     .wrapper { width: 740px; margin: 0 auto; background: #DEDEDE; border-radius: 8px; box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px, rgba(0, 0, 0, 0.45) 0 3px 10px; }
 
     header, section, footer { display: block; }
@@ -529,3 +529,4 @@ function delete_Entry() {
         width: 400px;
     }
 </style>
+
