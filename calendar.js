@@ -6,7 +6,10 @@ function updateCal() {
     console.log(savedEvents);
     closePopup();
     document.getElementById("scheduledevents").innerText = '';
-    savedEvents[clicked + ' ' + document.getElementById("calendarHeader").innerText + ' workout(s)'].push(document.getElementById('eventTitleInput').value);
+    if (document.getElementById('eventTitleInput').value.length > 0) {
+        console.log("updating events");
+        savedEvents[clicked + ' ' + document.getElementById("calendarHeader").innerText + ' workout(s)'].push(document.getElementById('eventTitleInput').value);
+    }
     document.getElementById('eventTitleInput').value = ''
     applySavedData();
     fetch("api/etrack_users/update", {
@@ -100,7 +103,11 @@ calendar.appendChild(daySquare);
 } 
 
 function clearWorkouts() {
-    savedEvents = {};
+    console.log(savedEvents);
+    for(var day in savedEvents) {
+        savedEvents[day] = [];
+        console.log("cleared " + savedEvents)
+    }
     applySavedData();
     fetch("api/etrack_users/update", {
         method: "PATCH",
