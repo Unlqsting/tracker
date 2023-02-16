@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="forum.css">
 </head>
 <body>
+    <div class="posts" id="postContainer"></div>
     <div class="addWrap">
-        <div class="posts" id="postContainer"></div>
+        <!--  -->
         <!--  -->
         <br><br>
         <br>
