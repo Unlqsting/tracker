@@ -17,7 +17,7 @@
     <h1>‎</h1>
 </header>
 
-<script src="track.js"></script>
+<script src="./track.js"></script>
 
 
 <h1> </h1>
