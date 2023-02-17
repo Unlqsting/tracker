@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to ETrack!</title>
+    <style>
+        body {
+            background-image: url('https://www.example.com/background.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        p {
+            font-size: 24px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            margin: 40px 0;
+            width: 100%;
+            height: 100%;
+            flex-wrap: wrap;
+            transition: all 0.8s ease;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 20px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #079181;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px #ccc;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            background-color: #066f63;
+            box-shadow: 0px 0px 5px #ccc;
+        }
+
+        .track, .stats, .forum {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 80vw;
+            height: 90vh;
+            margin-bottom: 40px;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+            background-color: rgb(22, 22, 41);
+            color: #fff;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+            font-size: 24px;
+            line-height: 1.5;
+        }
+
+        .track {
+            background-image: url('images/gym.png');
+            background-size: cover;
+        }
+
+        .stats {
+            background-image: url('https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/bench-press-spot-1571829590.jpg');
+            background-size: cover;
+            
+        }
+
+        .forum {
+            background-image: url('https://i.shgcdn.com/1e124b0b-7f01-435a-8812-ddb9c0bbe1bc/-/format/auto/-/preview/3000x3000/-/quality/lighter/');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to ETrack!</h1>
+    <p>Here, you can track your workouts, plan your workouts, set goals, and post questions on the forum!</p>
+    <div class="container">
+        <div class="track">
+            <h2>Hitting a workout today?</h2>
+            <p>Click below to keep track of your workout!</p>
+            <a href="https://unlqsting.github.io/tracker/track" class="button">Track</a>
+        </div>
+        <div class="stats">
+            <h2>Hit a new PR?</h2>
+            <p>Click below to update your stats!</p>
+            <a href="https://unlqsting.github.io/tracker/calendar" class="button">Stats</a>
+        </div>
+        <div class="forum">
+            <h2>Have any fitness questions?</h2>
+            <p>Click below to go to the forum!</p>
+            <a href="https://unlqsting.github.io/tracker/forum" class="button">Forum</a>
+        </div>
+    </div>
+</body>
+</html
