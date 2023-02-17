@@ -17,8 +17,8 @@
             <P><strong>Post Text:</strong><br>
             <input type="text" name="postText" class="postText" >
             <button type="submit" class="topicSubmit">Add Topic</button>
-        </form>
-    </div>
+        <!--  -->
+    <!-- </div> -->
     <div id="postModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -26,6 +26,6 @@
             <p id="modalPostText"></p>
         </div>
     </div>
-</body>
+<!-- </body> -->
 <script src="forum.js">
         

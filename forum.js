@@ -13,7 +13,7 @@ function createPost(data) {
     for (let i = 0; i < parsedData.length; i++) {
         let post = parsedData[i];
         let posted = '<div class="accessPost">' +
-            '<div onclick="changeText()" class="postTitle" id="postTitle">' +
+            '<div class="postTitle" id="postTitle">' +
                 '<h3>' + post.postTitle + '</h3>' +
             '</div>' +
             '<div class="postBody">' +
