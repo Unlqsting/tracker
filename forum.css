@@ -11,6 +11,8 @@ body {
   flex-direction: column;
   height: 100vh;
   width: 100vw;
+  scroll-behavior: auto;
+  overflow: auto;
 }
 
 h1 {
@@ -111,8 +113,11 @@ button {
 }
 
 .postContainer {
-  background-color: black;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: black;
+  flex-direction: column;
+  height: 30vh;
+  width: 30vw;
 }/*# sourceMappingURL=forum.css.map */
