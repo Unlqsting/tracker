@@ -16,9 +16,6 @@ function createPost(data) {
             '<div class="postTitle" id="postTitle">' +
                 '<h3>' + post.postTitle + '</h3>' +
             '</div>' +
-            '<div class="postBody">' +
-                '<p>' + post.post + '</p>' +
-            '</div>' +
             '</div>';
         
         const newDiv = document.createElement("div");
