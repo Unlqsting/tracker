@@ -2,7 +2,7 @@
 
 read_posts();
 
-// ! function changeText() {
+// !function changeText() {
 //   postInput = '<input type="text" name="postTitle" id="postTitle"></input>';
 //   document.getElementById("postTitle").innerHTML = postInput;
 // }
