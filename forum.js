@@ -2,10 +2,10 @@
 
 read_posts();
 
-function changeText() {
-  postInput = '<input type="text" name="postTitle" id="postTitle"></input>';
-  document.getElementById("postTitle").innerHTML = postInput;
-}
+// ! function changeText() {
+//   postInput = '<input type="text" name="postTitle" id="postTitle"></input>';
+//   document.getElementById("postTitle").innerHTML = postInput;
+// }
 //! create post
 function createPost(data) {
     parsedData = JSON.parse(data);
