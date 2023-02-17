@@ -8,11 +8,12 @@ function updateCal() {
     document.getElementById("scheduledevents").innerText = '';
     if (document.getElementById('eventTitleInput').value.length > 0) {
         console.log("updating events");
-        savedEvents[clicked + ' ' + document.getElementById("calendarHeader").innerText + ' workout(s)'].push(document.getElementById('eventTitleInput').value);
+        savedEvents[clicked + ' ' + document.getElementById("calendarHeader").innerText].push(document.getElementById('eventTitleInput').value);
+        
     }
     document.getElementById('eventTitleInput').value = ''
     applySavedData();
-    fetch("api/etrack_users/update", {
+    fetch("http://localhost:8086/api/etrack_users/update", {
         method: "PATCH",
         body: JSON.stringify({
             uname: "testUser",
@@ -32,17 +33,17 @@ const backDrop = document.getElementById('PopupBackDrop');
 const eventTitleInput = document.getElementById('eventTitleInput');
 
 function openPopup(date) {
-clicked = date;
-const eventForDay = events.find(e => e.date === clicked);
-
-if (eventForDay) {
-    document.getElementById('eventText').innerText = eventForDay.title;
-    deleteEventPopup.style.display = 'block';
-} else {
+    clicked = date;
+    // const eventForDay = events.find(e => e.date === clicked);
     newEventPopup.style.display = 'block';
-}
+// if (eventForDay) {
+//     document.getElementById('eventText').innerText = eventForDay.title;
+//     deleteEventPopup.style.display = 'block';
+// } else {
+//     newEventPopup.style.display = 'block';
+// }
 
-backDrop.style.display = 'block';
+    backDrop.style.display = 'block';
 }
 
 function closePopup() {
@@ -53,7 +54,7 @@ backDrop.style.display = 'none';
 
 let monthNav = 0;
 let clicked = null;
-let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
+// let events = localStorage.getItem('events') ? JSON.parse(localStorage.getItem('events')) : [];
 
 const calendar = document.getElementById('calendar');
 
@@ -91,8 +92,9 @@ for(let i = 1; i <= prevDays + daysInMonth; i++) {
 
     if (i > prevDays) {
         daySquare.innerText = i - prevDays;
+        daySquare.setAttribute("id", i - prevDays)
         daySquare.addEventListener('click', () => openPopup(daySquare.innerHTML));
-        savedEvents[daySquare.innerHTML + ' ' + document.getElementById("calendarHeader").innerText + ' workout(s)'] = Array();
+        savedEvents[daySquare.innerHTML + ' ' + document.getElementById("calendarHeader").innerText] = Array();
     } 
     else {
         daySquare.classList.add('padding');
@@ -109,7 +111,7 @@ function clearWorkouts() {
         console.log("cleared " + savedEvents)
     }
     applySavedData();
-    fetch("api/etrack_users/update", {
+    fetch("http://localhost:8086/api/etrack_users/update", {
         method: "PATCH",
         body: JSON.stringify({
             uname: "testUser",
@@ -123,7 +125,7 @@ function clearWorkouts() {
         .then(data => console.log(data)); 
 }
 
-fetch('api/etrack_users/')
+fetch('http://localhost:8086/api/etrack_users/')
   .then((response) => response.json())
   .then((data) => this.applydata(data[0]));
 
@@ -137,8 +139,10 @@ function applydata(data) {
 function applySavedData() {
     notemptyvalues= {};
     for (const [k, v] of Object.entries(savedEvents)) {
+        document.getElementById(k.split(" ")[0]).style.color="";
         if (!Array.isArray(v) || v.length) {
             notemptyvalues[k] = v;
+            document.getElementById(k.split(" ")[0]).style.color="cyan";
         }
     }
     notemptyvaluesaslist = new Array();
