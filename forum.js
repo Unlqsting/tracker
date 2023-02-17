@@ -1,7 +1,11 @@
 
 
-read_users();
+read_posts();
 
+function changeText() {
+  postInput = '<input type="text" name="postTitle" id="postTitle"></input>';
+  document.getElementById("postTitle").innerHTML = postInput;
+}
 //! create post
 function createPost(data) {
     parsedData = JSON.parse(data);
@@ -9,7 +13,7 @@ function createPost(data) {
     for (let i = 0; i < parsedData.length; i++) {
         let post = parsedData[i];
         let posted = '<div class="accessPost">' +
-            '<div class="postTitle">' +
+            '<div class="postTitle" id="postTitle">' +
                 '<h3>' + post.postTitle + '</h3>' +
             '</div>' +
             '<div class="postBody">' +
@@ -33,7 +37,7 @@ function createPost(data) {
   }
 
   //! Display User Table, data is fetched from Backend Database
-function read_users() {
+function read_posts() {
     $.getJSON('http://127.0.0.1:8086/api/forum/', function(data) {
         createPost(JSON.stringify(data));
     });

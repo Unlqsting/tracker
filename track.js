@@ -88,7 +88,7 @@ function addNew(){
         chooseExercise.innerText = otherButton.innerText;
         exerciseOptions.style.display = "none";
     });
-    
+  
     const fiveButton = newDiv.querySelector(".five-btn");
     fiveButton.addEventListener("click", function() {
         chooseReps.innerText = fiveButton.innerText;
@@ -105,6 +105,7 @@ function addNew(){
     fifteenButton.addEventListener("click", function() {
         chooseReps.innerText = fifteenButton.innerText;
         repOptions.style.display = "none";
+
     });
 
     const fivesButton = newDiv.querySelector(".fives-btn");
@@ -128,4 +129,3 @@ function addNew(){
 }
 
 addWorkout.addEventListener("click", addNew);
-

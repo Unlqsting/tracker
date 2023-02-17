@@ -15,6 +15,8 @@ body {
     flex-direction: column;
     height: 100vh;
     width: 100vw;
+    scroll-behavior: auto;
+    overflow: auto;
 }
 
 h1 {
@@ -94,7 +96,7 @@ button {
 }
   
 .modal-content {
-    background-color: #7e6363;
+    background-color: #000000;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -113,4 +115,13 @@ button {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+.postContainer {
+    @include flex();
+    background-color: black;
+    flex-direction: column;
+    height: 30vh;
+    width: 30vw;
+    color: white;
+    
 }
