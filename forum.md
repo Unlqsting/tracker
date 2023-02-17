@@ -16,7 +16,7 @@
             <input type="text" name="topic" class="topic" size=40 maxlength=50 placeholder="Topic title">
             <P><strong>Post Text:</strong><br>
             <input type="text" name="postText" class="postText" >
-            <button type="submit" class="topicSubmit">Add Topic</button>
+            <button type="submit" class="topicSubmit" onClick="window.location.href='https://unlqsting.github.io/tracker/forum';">Add Topic</button>
         <!--  -->
     <!-- </div> -->
     <div id="postModal" class="modal">
