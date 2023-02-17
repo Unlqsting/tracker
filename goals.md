@@ -74,11 +74,13 @@
 <button onclick="addRow()">Add Row</button>
 
  
-<form action="/action_page.php">
+<form action="http://127.0.0.1:8086/api/sport/create" method="post">
     <label for="goal">Goal:</label><br>
-    <input type="text" id="goalname" name="goalname" value="135 Bench"><br>
+    <input type="text" id="goal" name="goal" placeholder="enter your goal"><br>
+    <!--  -->
     <label for="difficulty">Difficulty:</label><br>
-    <input type="text" id="Diff" name="Diff" value="5"><br><br>
+    <input type="text" id="diff" name="diff" placeholder="enter difficulty (1-10)"><br><br>
+    <!--  -->
     <input type="submit" value="Submit">
 </form> 
 </body>

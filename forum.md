@@ -7,24 +7,18 @@
     <link rel="stylesheet" href="forum.css">
 </head>
 <body>
+    <div class="posts" id="postContainer"></div>
     <div class="addWrap">
-        <div class="posts" id="postContainer"></div>
-        <!--  -->
         <br><br>
         <br>
         <h1>Add a Topic</h1>
         <form method=post action="http://127.0.0.1:8086/api/forum/create">
-<!--  -->
-            <!-- <input type="text" class="topicOwner" size=40 maxlength=150 placeholder="Enter your email address">
-            <br><br> -->
-<!--  -->
             <input type="text" name="topic" class="topic" size=40 maxlength=50 placeholder="Topic title">
-            <!--  -->
             <P><strong>Post Text:</strong><br>
             <input type="text" name="postText" class="postText" >
-            <!--  -->
-            <button type="submit" class="topicSubmit">Add Topic</button>
-<!--  -->
+            <button type="submit" class="topicSubmit" onsubmit="setTimeout(function () { window.location.reload(); }, 10)">Add Topic</button>
+        <!--  -->
+    <!-- </div> -->
     <div id="postModal" class="modal">
         <div class="modal-content">
             <span class="close">&times;</span>
@@ -32,6 +26,6 @@
             <p id="modalPostText"></p>
         </div>
     </div>
-
+<!-- </body> -->
 <script src="forum.js">
         
