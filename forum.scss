@@ -17,6 +17,7 @@ body {
     width: 100vw;
     scroll-behavior: auto;
     overflow: auto;
+    margin-top: 10vh;
 }
 
 h1 {
@@ -75,7 +76,7 @@ button {
 }
 
 .posts {
-    height: 30vh;
+    height: 50vh;
     width: 50vw;
     display: flex;
     background-color: white;
