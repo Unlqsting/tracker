@@ -1,20 +1,3 @@
-// topic = document.getElementById("topic");
-// postText = document.getElementById("postText");
-// submitForm = document.getElementById("submitForm");
-
-// function postData() {
-//   fetch("http://127.0.0.1:8086/api/forum/create", {
-//     method: "POST",
-//     body: JSON.stringify({
-//         postTitle: topic.value,
-//         postText: postText.value,
-//     }),
-//     headers: {
-//         "Content-type": "application/json; charset=UTF-8"
-//     }
-//   }).then(window.location.reload());
-
-// }
 
 
 read_posts();
@@ -44,8 +27,8 @@ function createPost(data) {
         // Add click event listener to display modal window when post is clicked
         newDiv.addEventListener('click', function() {
         document.getElementById('postModal').style.display = "block";
-        document.getElementById('modalPostTitle').innerHTML = post.postTitle;
-        document.getElementById('modalPostText').innerHTML = post.post;
+        document.getElementById('modalPostTitle').innerHTML = "Title: " + post.postTitle;
+        document.getElementById('modalPostText').innerHTML = "Post: " + post.post;
         });
     }
   }
