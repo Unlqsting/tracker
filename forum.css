@@ -32,6 +32,7 @@ h1 {
   width: 50vw;
   transition: width 2s, height 2s, background-color 2s, transform 2s;
   border-radius: 5px;
+  scroll-behavior: auto;
 }
 
 input {
@@ -70,12 +71,13 @@ button {
 
 .posts {
   height: 30vh;
-  width: 30vw;
+  width: 50vw;
   display: flex;
   background-color: white;
   color: black;
-  position: relative;
-  float: right-top;
+  flex-direction: column;
+  scroll-behavior: auto;
+  overflow: auto;
 }
 
 .modal {
@@ -112,24 +114,13 @@ button {
   cursor: pointer;
 }
 
-.postContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: black;
-  flex-direction: column;
-  height: 30vh;
-  width: 30vw;
-  color: white;
-}
-
 .accessPost {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   height: 10vh;
-  width: 20vw;
+  width: 50vw;
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   border-radius: 5px;
@@ -137,4 +128,5 @@ button {
 }
 .accessPost:hover {
   background-color: rgb(22, 22, 41);
+  cursor: pointer;
 }/*# sourceMappingURL=forum.css.map */
