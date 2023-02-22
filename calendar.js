@@ -5,7 +5,7 @@ var savedEvents = {
 function updateCal() {
     console.log(savedEvents);
     closePopup();
-    document.getElementById("scheduledevents").innerText = '';
+    document.getElementById("scheduledevents").innerHTML = '';
     if (document.getElementById('eventTitleInput').value.length > 0) {
         console.log("updating events");
         savedEvents[clicked + ' ' + document.getElementById("calendarHeader").innerText].push(document.getElementById('eventTitleInput').value);
@@ -136,6 +136,7 @@ function applydata(data) {
     applySavedData();
 }
 
+const scheduledEvents = document.getElementById("scheduledevents");
 function applySavedData() {
     notemptyvalues= {};
     for (const [k, v] of Object.entries(savedEvents)) {
@@ -145,14 +146,23 @@ function applySavedData() {
             document.getElementById(k.split(" ")[0]).style.color="cyan";
         }
     }
-    notemptyvaluesaslist = new Array();
+    scheduledEvents.innerHTML = '';
+    const workoutTable = document.createElement("table");
+    const workoutTableBody = document.createElement("tbody");
+
+    rowIndex = 1
     for (const [k, v] of Object.entries(notemptyvalues)) {
-        if (!Array.isArray(v) || v.length) {
-            notemptyvaluesaslist.push(k + ': ' + v.join(", "));
-        }
+        const row = document.createElement("tr");
+        const dateCell = document.createElement("td");
+        dateCell.innerText = k;
+        const workoutCell = document.createElement("td");
+        workoutCell.innerText = v;
+        row.appendChild(dateCell);
+        row.appendChild(workoutCell);
+        workoutTableBody.appendChild(row)
     }
- 
-    document.getElementById("scheduledevents").innerText = notemptyvaluesaslist.join("\n");
+    workoutTable.appendChild(workoutTableBody);
+    scheduledEvents.appendChild(workoutTable);
 }
 
 renderCalendar();

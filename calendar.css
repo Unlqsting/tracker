@@ -13,12 +13,6 @@
   color: white;
 }
 
-  #clearButton {
-    position: absolute;
-    right: 5px;
-    bottom: 150px;
-  }
-
 #eventtitle {
   background-color: #222;
   padding: 5px;
@@ -157,6 +151,7 @@ button {
   color: white;
   border-color: white;
 }
+
 #saveButton, #closeButton {
   background-color: #38878a;
   border-radius: 10px;
@@ -189,4 +184,18 @@ button {
   height: 100%;
   position: absolute;
   background-color: rgba(0,0,0,0.8);
+}
+
+table {
+  color: white;
+  border: 1px solid;
+  width: 100%;
+}
+
+th, td {
+  padding: 3px;
+}
+
+td + td {
+  border-left: 1px solid white;
 }
