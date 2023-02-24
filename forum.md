@@ -9,9 +9,12 @@
 </head>
 <body>
     <div id="delModal" class="delModal">
-        <span id="closeDelModal" class="close">&times;</span>
-        <h1>Are you sure you want to delete this post?</h1>
-        <button type="button" class="delButton" id="delButton">Delete post</button>
+        <div class="delModal-content">
+            <span id="closeDelModal" class="close">&times;</span>
+            <h1>Are you sure you want to delete this post?</h1>
+            <p>This action cannot be undone.</p>
+            <button type="button" class="delButton" id="delButton">Delete post</button>
+        </div>
     </div>
     <h1>Posts</h1>
     <div class="posts" id="postContainer">

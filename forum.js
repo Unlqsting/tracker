@@ -83,7 +83,7 @@ updateButton.addEventListener('click', function() {
 //predelete
 const preDelButton = document.getElementById('preDelButton');
 preDelButton.addEventListener('click', function() {
-  document.getElementById('delModal').style.display = "block";
+  document.getElementById('delModal').style.display = "flex";
   document.getElementById('postModal').style.display = "none";
 });
 //predelete
