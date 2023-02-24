@@ -8,7 +8,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-<!-- action="http://127.0.0.1:8086/api/forum/create" target="_blank" -->
+    <div id="delModal" class="delModal">
+        <span id="closeDelModal" class="close">&times;</span>
+        <h1>Are you sure you want to delete this post?</h1>
+        <button type="button" class="delButton" id="delButton">Delete post</button>
+    </div>
     <h1>Posts</h1>
     <div class="posts" id="postContainer">
     </div>
@@ -30,8 +34,10 @@
             <h3 id="modalPostTitle"></h3>
             <p id="modalPostText"></p>
             <button type="button" class="updateButton" id="updateButton">Update</button>
+            <button type="button" class="preDelButton" id="preDelButton">Delete post</button>
         </div>
     </div>
+<!--  -->
 <!-- </body> -->
 <script src="forum.js">
 

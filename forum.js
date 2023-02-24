@@ -2,10 +2,6 @@
 
 read_posts();
 
-// !function changeText() {
-//   postInput = '<input type="text" name="postTitle" id="postTitle"></input>';
-//   document.getElementById("postTitle").innerHTML = postInput;
-// }
 //! create post
 function createPost(data) {
     parsedData = JSON.parse(data);
@@ -34,7 +30,7 @@ function createPost(data) {
           //? display modal window as block element
           document.getElementById('postModal').style.display = "block";   
           
-          //! set modal elements to post data
+          //! set modal elements to post data. Value of input fields is set to the post title and content of the clicked post
           modalPostTitle.innerHTML = "Post Title: " + '<input type="text" name="updatedPostTitle" id="updatedPostTitle" value="' + post.postTitle + '">';
           modalPostText.innerHTML = "Post: " + '<input type="text" name="updatedPost" id="updatedPost" value="' + post.post + '">';
           
@@ -77,18 +73,45 @@ updateButton.addEventListener('click', function() {
     if (response.ok) {
       // Reload the page to display the updated post
       window.location.reload();
+      
     }
   });
 
 });
 
+// ! delete post
+//predelete
+const preDelButton = document.getElementById('preDelButton');
+preDelButton.addEventListener('click', function() {
+  document.getElementById('delModal').style.display = "block";
+  document.getElementById('postModal').style.display = "none";
+});
+//predelete
 
-// ! modal stuff
+const delButton = document.getElementById('delButton');
+
+delButton.addEventListener('click', function() {
+  // Send a DELETE request to the backend API to delete the post
+  fetch('http://127.0.0.1:8086/api/forum/delete', {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({id: id}),
+  })
+  .then(response => {
+    if (response.ok) {
+      // Reload the page to display the updated post
+      window.location.reload();
+      
+    }
+  });
+});
+//
+
+//! post modal stuff
 const modal = document.getElementById("postModal");
 const closeBtn = document.querySelector('#closeBtn')
-
-
-
 
 // Close the modal window when the user clicks the close button or clicks outside the modal window
 closeBtn.onclick = function() {
@@ -103,3 +126,7 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 };
+
+//! delete modal stuff
+const delModal = document.getElementById("delModal");
+const closeDelModal = document.querySelector('#closeDelModal')
