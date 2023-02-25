@@ -2,17 +2,7 @@ var savedEvents = {
     
 }
 
-function updateCal() {
-    console.log(savedEvents);
-    closePopup();
-    document.getElementById("scheduledevents").innerHTML = '';
-    if (document.getElementById('eventTitleInput').value.length > 0) {
-        console.log("updating events");
-        savedEvents[clicked + ' ' + document.getElementById("calendarHeader").innerText].push(document.getElementById('eventTitleInput').value);
-        
-    }
-    document.getElementById('eventTitleInput').value = ''
-    applySavedData();
+function PATCH_notemtpyvalues() {
     fetch("https://lennsflask.duckdns.org/api/etrack_users/update", {
         method: "PATCH",
         body: JSON.stringify({
@@ -27,8 +17,22 @@ function updateCal() {
         .then(data => console.log(data)); 
 }
 
+function updateCal() {
+    console.log(savedEvents);
+    closePopup();
+    document.getElementById("scheduledevents").innerHTML = '';
+    if (document.getElementById('eventTitleInput').value.length > 0) {
+        console.log("updating events");
+        savedEvents[clicked + ' ' + document.getElementById("calendarHeader").innerText].push(document.getElementById('eventTitleInput').value);
+        
+    }
+    document.getElementById('eventTitleInput').value = ''
+    applySavedData();
+    PATCH_request();
+}
+
 const newEventPopup = document.getElementById('newEventPopup');
-const deleteEventPopup = document.getElementById('deleteEventPopup');
+const editEventPopup = document.getElementById('editEventPopup');
 const backDrop = document.getElementById('PopupBackDrop');
 const eventTitleInput = document.getElementById('eventTitleInput');
 
@@ -38,7 +42,7 @@ function openPopup(date) {
     newEventPopup.style.display = 'block';
 // if (eventForDay) {
 //     document.getElementById('eventText').innerText = eventForDay.title;
-//     deleteEventPopup.style.display = 'block';
+//     editEventPopup.style.display = 'block';
 // } else {
 //     newEventPopup.style.display = 'block';
 // }
@@ -47,7 +51,7 @@ function openPopup(date) {
 }
 
 function closePopup() {
-deleteEventPopup.style.display = 'none';
+editEventPopup.style.display = 'none';
 newEventPopup.style.display= 'none';
 backDrop.style.display = 'none';
 }
@@ -155,6 +159,11 @@ function applySavedData() {
         const row = document.createElement("tr");
         const dateCell = document.createElement("td");
         dateCell.innerText = k;
+        const editButton = document.createElement("button");
+        editButton.innerText = "Edit Date";
+        editButton.classList.add('editButton');
+        editButton.addEventListener('click', () => openEditPopup(k.split(" ")[0]));
+        dateCell.appendChild(editButton);
         const workoutCell = document.createElement("td");
         workoutCell.innerText = v;
         row.appendChild(dateCell);
@@ -165,4 +174,24 @@ function applySavedData() {
     scheduledEvents.appendChild(workoutTable);
 }
 
+function openEditPopup(day) {
+    clickedDate = day;
+    editEventPopup.style.display = 'block';
+    backDrop.style.display = 'block';
+}
+
+function editDate() {
+    input = document.getElementById("eventDayInput").value
+    console.log("input is " + input);
+    console.log("clicked date is " + clickedDate);
+    if (input + ' ' + document.getElementById("calendarHeader").innerText in savedEvents) {
+        savedEvents[input + ' ' + document.getElementById("calendarHeader").innerText] = savedEvents[clickedDate + ' ' + document.getElementById("calendarHeader").innerText]
+        savedEvents[clickedDate + ' ' + document.getElementById("calendarHeader").innerText] = []
+        applySavedData();
+        PATCH_notemtpyvalues();
+    }
+    console.log(savedEvents);
+    document.getElementById("eventDayInput").value = '';
+    closePopup();
+}
 renderCalendar();
