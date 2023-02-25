@@ -13,7 +13,7 @@ function updateCal() {
     }
     document.getElementById('eventTitleInput').value = ''
     applySavedData();
-    fetch("http://localhost:8086/api/etrack_users/update", {
+    fetch("https://lennsflask.duckdns.org/api/etrack_users/update", {
         method: "PATCH",
         body: JSON.stringify({
             uname: "testUser",
@@ -111,7 +111,7 @@ function clearWorkouts() {
         console.log("cleared " + savedEvents)
     }
     applySavedData();
-    fetch("http://localhost:8086/api/etrack_users/update", {
+    fetch("https://lennsflask.duckdns.org/api/etrack_users/update", {
         method: "PATCH",
         body: JSON.stringify({
             uname: "testUser",
@@ -125,7 +125,7 @@ function clearWorkouts() {
         .then(data => console.log(data)); 
 }
 
-fetch('http://localhost:8086/api/etrack_users/')
+fetch('https://lennsflask.duckdns.org/api/etrack_users/')
   .then((response) => response.json())
   .then((data) => this.applydata(data[0]));
 
