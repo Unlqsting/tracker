@@ -130,3 +130,8 @@ window.onclick = function(event) {
 //! delete modal stuff
 const delModal = document.getElementById("delModal");
 const closeDelModal = document.querySelector('#closeDelModal')
+
+// Close the modal window when the user clicks the close button or clicks outside the modal window
+closeDelModal.onclick = function() {
+  delModal.style.display = "none";
+}
