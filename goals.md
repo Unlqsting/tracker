@@ -71,7 +71,7 @@ function addRow() {
 
 
  
-<form action="http://127.0.0.1:8086/api/sport/create" method="post">
+<form action="https://lennsflask.duckdns.org/api/sport/" method="post">
     <label for="goal">Goal:</label><br>
     <input type="text" id="goal" name="goal" placeholder="enter your goal"><br>
     <!--  -->
