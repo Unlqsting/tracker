@@ -56,7 +56,7 @@
   // prepare HTML result container for new output
   const resultContainer = document.getElementById("result");
   // prepare URL's to allow easy switch from deployment and localhost
-  const url = "http://localhost:8086/api/athlete"
+  const url = "https://lennsflask.duckdns.org/api/athlete"
   //const url = "http://172.19.104.182:8086/api/athlete"
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
