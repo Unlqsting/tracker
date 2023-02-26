@@ -1,7 +1,5 @@
 # Athlete Stats
 
-## Liav
-
 <p>Athlete API</p>
 
 <table id = "result">
