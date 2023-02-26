@@ -3,7 +3,7 @@ var savedEvents = {
 }
 
 function send_Data(endpoint, method, body) {
-    fetch("http://localhost:8086/api/etrack_users/" + endpoint, {
+    fetch("https://lennsflask.duckdns.org/api/etrack_users/" + endpoint, {
         method: method,
         body: JSON.stringify(body),
         headers: {
@@ -133,7 +133,7 @@ function clearWorkouts() {
     send_Data("delete", "DELETE", {targetDates: targetDates})
 }
 
-fetch('http://localhost:8086/api/etrack_users/')
+fetch('https://lennsflask.duckdns.org/api/etrack_users/')
   .then((response) => response.json())
   .then((data) => this.applydata(data));
 
