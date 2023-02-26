@@ -21,32 +21,24 @@
               <th> Goal </th>
               <th> Difficulty </th>
               <th> Date </th>
-              <th> Status </th>
-          </thead>
             <tbody>
               <tr>
                 <td> 1 </td>
-                <td> Example </td>
-                <td> Hardest </td>
-                <td> 22 February 2023</td>
-                <td>
-                  <p> In Progress </p>
-                </td>
+                <td> Bench 135 </td>
+                <td> 7 </td>
+                <td> 2/25/2023</td>
               </tr>
               <tr>
                 <td> 2 </td>
-                <td> Example </td>
-                <td> Hardest </td>
-                <td> 22 February 2023</td>
-                <td>
-                  <p> In Progress </p>
-                </td>
+                <td> Squat 225 </td>
+                <td> 8 </td>
+                <td> 2/25/2023</td>
               </tr>
             </tbody>
-      </section>
+
 
   <script>
-    function addRow() {
+function addRow() {
   // Get the table element
   var table = document.querySelector('table');
 
@@ -58,20 +50,25 @@
   var goalCell = newRow.insertCell(1);
   var diffCell = newRow.insertCell(2);
   var dateCell = newRow.insertCell(3);
-  var statusCell = newRow.insertCell(4);
 
   // Set the cell values for the new row
-  idCell.innerHTML = '2';
-  goalCell.innerHTML = 'New Goal';
-  diffCell.innerHTML = 'Easy';
-  dateCell.innerHTML = '23 February 2023';
-  statusCell.innerHTML = '<p>In Progress</p>';
+  idCell.innerHTML = table.rows.length - 1;
+  goalCell.innerHTML = document.getElementById('goal').value;
+  diffCell.innerHTML = document.getElementById('diff').value;
+  dateCell.innerHTML = new Date().toLocaleDateString(); // Use current date
 }
 
+// fetch('http://localhost:8086/api/sport/')
+//   .then((response) => response.json())
+//   .then((data) => this.addRow())
 
+
+// function makeRow() {
+//   post res
+// }
     </script>
 
-<button onclick="addRow()">Add Row</button>
+
 
  
 <form action="http://127.0.0.1:8086/api/sport/create" method="post">
@@ -82,7 +79,11 @@
     <input type="text" id="diff" name="diff" placeholder="enter difficulty (1-10)"><br><br>
     <!--  -->
     <input type="submit" value="Submit">
+
 </form> 
-</body>
-</html>
+<br>
+<br>
+<button onclick="addRow()">Add Row</button>
+
+
 
