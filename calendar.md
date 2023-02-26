@@ -46,13 +46,13 @@
       <button id="cancelButton" onclick="closePopup()">Cancel</button>
     </div>
 
-    <div id="deleteEventPopup">
-      <h2>Event</h2>
+    <div id="editEventPopup">
+      <h2>Edit Day</h2>
 
-      <p id="eventText"></p>
+      <input id="eventDayInput" placeholder="Target Day" />
 
-      <button id="deleteButton" onclick="closePopup()">Delete</button>
-      <button id="closeButton">Close</button>
+      <button id="editButton" onclick="editDate()">Edit</button>
+      <button id="cancelButton" onclick="closePopup()">Cancel</button>
     </div>
 
     <div id="PopupBackDrop"></div>
