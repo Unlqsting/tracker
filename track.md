@@ -25,6 +25,8 @@
 
   <input type="submit" value="Submit">
 
+<button onclick="clearWorkouts()">Clear Data</button>
+
 <script>
   const form = document.getElementById('myForm');
   form.addEventListener('submit', (event) => {
@@ -34,9 +36,15 @@
     xhr.open('POST', form.action);
     xhr.send(formData);
   });
+
+  function clearWorkouts() {
+      $("#result").remove();
+      $("action_alert").text
+        ("All rows deleted")
+  }
 </script>
 </form>
-  <button onclick="create_row()">Add Row</button>
+  <button onclick="addRow()">Add Row</button>
 <table id = "result">
   <thead>
     <tr>
@@ -163,6 +171,42 @@
         })
     })
   }
+
+  function addRow() {
+          // Get the table element
+          var table = document.querySelector('table');
+
+          // Create a new row
+          var newRow = table.insertRow(-1);
+
+          // Add cells to the new row
+          var WorkoutCell = newRow.insertCell(0);
+          var SetsCell = newRow.insertCell(1);
+          var RepsCell = newRow.insertCell(2);
+
+          // Get the values of the input fields
+          var workoutValue = document.getElementById('Workout').value;
+          var setsValue = document.getElementById('Sets').value;
+          var repsValue = document.getElementById('Reps').value;
+
+          // Set the cell values for the new row
+          WorkoutCell.innerHTML = workoutValue;
+          SetsCell.innerHTML = setsValue;
+          RepsCell.innerHTML = repsValue;
+  }
+
+  function deleteAll() {
+  const requestOptions = {
+    method: 'DELETE',
+    headers: { 'Content-Type': 'application/json' },
+  };
+
+  fetch('https://lennsflask.duckdns.org/api/user/delete', requestOptions)
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log(error));
+}
+
       </script>
   </main>
 </body>
