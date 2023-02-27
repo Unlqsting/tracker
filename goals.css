@@ -7,6 +7,59 @@
 }
 
 
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+button {
+  appearance: none;
+  background-color: transparent;
+  border: 2px solid #1A1A1A;
+  border-radius: 15px;
+  box-sizing: border-box;
+  color: #3B3B3B;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Roobert,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+  min-height: 60px;
+  min-width: 0;
+  outline: none;
+  padding: 16px 24px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%;
+  will-change: transform;
+}
+
+.button-28:disabled {
+  pointer-events: none;
+}
+
+.button-28:hover {
+  color: #fff;
+  background-color: #1A1A1A;
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-2px);
+}
+
+.button-28:active {
+  box-shadow: none;
+  transform: translateY(0);
+}
 
 body{
     min-height:100vh;
@@ -45,7 +98,13 @@ main.table {
     padding: .8rem 1rem;
 }
 
-.table_body{
+
+.table_body {
+    max-height: 1000px; /* change the value to the height you want to set for the scrollable area */
+    overflow-y: auto;
+  }
+  
+/* .table_body{
     width: 95%;
     max-height: 89%;
     background-color:#fffb;
@@ -53,8 +112,8 @@ main.table {
     margin: .8rem auto;
     border-radius: .6rem;
 
-    overflow: auto;
-}
+    overflow-y: auto;
+} */
 
 .table_body::-webkit-scrollbar{
     width: 0.5rem;

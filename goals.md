@@ -8,12 +8,14 @@
     <link rel="stylesheet" href="goals.css">
     <link rel="oogabooga">
 </head>
+
+![]({{site.baseurl}}/images/e.png "https://github.com/Unlqsting/tracker") 
 <body>
   <main class = "table"> 
       <section class="table_header">
         <h1>Goals</h1>
         <table id = "table">
-        </section>
+      </section>
       <section class="table_body">
         <table>
           <thead>
@@ -26,7 +28,7 @@
             <tr>
             <tbody>
             </tbody>
-            </table>
+        </table>
 
 
 <form action="javascript:createGoal()">
@@ -189,7 +191,7 @@
 </form> 
 <br>
 <br>
-<button onclick="addRow()">Add Row</button> --> -->
+<button onclick="addRow()">Add Row</button> --> 
 
 
 
