@@ -148,7 +148,12 @@ function applydata(data) { // Loading data from BE into savedEvents
     for (const row of data) {
         console.log(row);
         console.log(row["date"]);
-        savedEvents[row["date"]] = row["savedWorkouts"]
+        if (row["date"] in savedEvents) {
+            savedEvents[row["date"]] = row["savedWorkouts"]
+        }
+        else {
+            console.log(row["date"] + " is not in the current month.")
+        }
     }
     console.log(savedEvents);
     applySavedData();
@@ -159,7 +164,7 @@ function applySavedData() {
     notemptyvalues= {};
     for (const [k, v] of Object.entries(savedEvents)) {
         document.getElementById(k.split(" ")[0]).style.color="";
-            if (!Array.isArray(v) || v.length) { // getting days with events saved
+            if (v.length) { // getting days with events saved
             notemptyvalues[k] = v;
             document.getElementById(k.split(" ")[0]).style.color="cyan"; // day highlighting
             }
