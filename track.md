@@ -25,8 +25,6 @@
 
   <input type="submit" value="Submit">
 
-<button onclick="clearWorkouts()">Clear Data</button>
-
 <script>
   const form = document.getElementById('myForm');
   form.addEventListener('submit', (event) => {
@@ -37,11 +35,6 @@
     xhr.send(formData);
   });
 
-  function clearWorkouts() {
-      $("#result").remove();
-      $("action_alert").text
-        ("All rows deleted")
-  }
 </script>
 </form>
   <button onclick="addRow()">Add Row</button>
@@ -83,6 +76,7 @@
   const url = "https://lennsflask.duckdns.org/api/user"
   const create_fetch = url + '/create';
   const read_fetch = url + '/';
+  const delete_fetch = url + '/delete';
 
   read_users();
 
@@ -195,26 +189,37 @@
           RepsCell.innerHTML = repsValue;
   }
 
-  function deleteAll() {
-  const requestOptions = {
-    method: 'DELETE',
-    headers: { 'Content-Type': 'application/json' },
-  };
+  function delete_workout() {
+    const delOptions = {
+        method: 'DELETE',
+        headers: {
+            "content-type": "application/json",
+            'Authorization': 'Bearer my-token',
+        },
+    };
 
-  fetch('https://lennsflask.duckdns.org/api/user/delete', requestOptions)
-    .then(response => response.json())
-    .then(data => console.log(data))
-    .catch(error => console.log(error));
-}
-
+    // URL for DELETE API
+    // Fetch API call to the database to create a new user
+    fetch(delete_fetch, delOptions)
+      .then(response => {
+        // trap error response from Web API
+        if (response.status !== 200) {
+          window.location.reload();
+          return;
+        }
+        // response contains valid result
+        response.json().then(data => {
+            console.log(data);
+        })
+    })
+  }
       </script>
   </main>
 </body>
 </html>
 
-
-  </section>
-
-  </div>
-  </body>
-</html>
+<div>
+<form action="javascript:delete_workout()">
+  <button>Delete Records</button>
+</form>
+<div>
