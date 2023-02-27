@@ -99,21 +99,14 @@ main.table {
 }
 
 
-.table_body {
-    max-height: 1000px; /* change the value to the height you want to set for the scrollable area */
-    overflow-y: auto;
-  }
-  
-/* .table_body{
+ .table_body{
     width: 95%;
     max-height: 89%;
     background-color:#fffb;
-
     margin: .8rem auto;
     border-radius: .6rem;
-
     overflow-y: auto;
-} */
+} 
 
 .table_body::-webkit-scrollbar{
     width: 0.5rem;
@@ -144,5 +137,6 @@ thead th{
 
 td, th {
     text-align: left;
+    vertical-align: middle;
   }
   

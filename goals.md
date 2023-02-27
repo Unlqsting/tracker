@@ -8,8 +8,6 @@
     <link rel="stylesheet" href="goals.css">
     <link rel="oogabooga">
 </head>
-
-![]({{site.baseurl}}/images/e.png "https://github.com/Unlqsting/tracker") 
 <body>
   <main class = "table"> 
       <section class="table_header">
