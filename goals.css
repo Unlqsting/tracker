@@ -86,7 +86,7 @@ main.table {
     box-shadow: 0 .4rem .8rem #000500;
     border-radius: .8rem;
 
-    overflow: hidden;
+    overflow:scroll
 
 
 }
@@ -100,8 +100,8 @@ main.table {
 
 
  .table_body{
-    width: 95%;
-    max-height: 89%;
+    width: 200%;
+    max-height: 1000000%;
     background-color:#fffb;
     margin: .8rem auto;
     border-radius: .6rem;
