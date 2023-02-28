@@ -23,7 +23,7 @@
         <br><br>
         <br>
         <h1>Add a Topic</h1>
-        <form method=post action="http://127.0.0.1:8086/api/forum/create">
+        <form method=post action="https://lennsflask.duckdns.org/api/forum/create">
             <input type="text" name="topic" id="topic" class="topic" size=40 maxlength=50 placeholder="Topic title">
             <P><strong>Post Text:</strong><br>
             <input type="text" id="postText" name="postText" class="postText" >

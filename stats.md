@@ -23,27 +23,27 @@
 <form action="javascript:create_athlete()">
     <p><label>
        Age:
-        <input type="text" name="Age" id="Age" required>
+        <input autocomplete="off" type="number" name="Age" id="Age" required>
     </label></p>
     <p><label>
         Weight:
-        <input type="text"  id="Weight" required>
+        <input autocomplete="off" type="number"  id="Weight" required>
     </label></p>
     <p><label>
         Bench:
-        <input type="text"  id="Bench" required>
+        <input autocomplete="off" type="number"  id="Bench" required>
     </label></p>
      <p><label>
         Squat:
-        <input type="text"  id="Squat" required>
+        <input autocomplete="off" type="number"  id="Squat" required>
     </label></p>
      <p><label>
         Pull-up:
-        <input type="text" id="Pullup" required>
+        <input autocomplete="off" type="number" id="Pullup" required>
     </label></p>
      <p><label>
         Mile:
-        <input type="text"  id="Mile" required>
+        <input autocomplete="off" type="text"  id="Mile" required>
     </label></p>
     <p>
         <button>Create</button>

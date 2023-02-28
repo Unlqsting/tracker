@@ -47,7 +47,7 @@ function createPost(data) {
 
 //! Display User Table, data is fetched from Backend Database
 function read_posts() {
-    $.getJSON('http://127.0.0.1:8086/api/forum/', function(data) {
+    $.getJSON('https://lennsflask.duckdns.org/api/forum', function(data) {
         createPost(JSON.stringify(data));
         id = data.id;
     });
@@ -62,7 +62,7 @@ updateButton.addEventListener('click', function() {
   const updatedPost = document.getElementById('updatedPost').value;
 
   // Send a PUT request to the backend API to update the post with the new title and content
-  fetch('http://127.0.0.1:8086/api/forum/update', {
+  fetch('https://lennsflask.duckdns.org/api/forum/update', {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
@@ -92,7 +92,7 @@ const delButton = document.getElementById('delButton');
 
 delButton.addEventListener('click', function() {
   // Send a DELETE request to the backend API to delete the post
-  fetch('http://127.0.0.1:8086/api/forum/delete', {
+  fetch('https://lennsflask.duckdns.org/api/forum/delete', {
     method: 'DELETE',
     headers: {
       'Content-Type': 'application/json',
